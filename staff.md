@@ -10,7 +10,8 @@ description: A listing of all the course staff members.
 
 Dr. Rakibul Hasan\
 Email: rakibul.hasan@asu.edu\
-Office hours: TBD
+Office: BYENG 470\\
+Office hours: Mon and Wed 1:30 to 2:30 at BYENG 470
 
 ## Teaching Assistants
 TBD
