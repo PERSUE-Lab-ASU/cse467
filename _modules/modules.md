@@ -1,7 +1,6 @@
 ---
 title: Course Schedule
 ---
-
 Aug 26
 :	Introduction and overview of the course
 
@@ -15,7 +14,8 @@ Sep 04
 :	Privacy threat modeling 1 (LINDDUN, DFD, steps 1–3)
 
 Sep 09
-:	Privacy threat modeling 2 (LINDUNN steps 3–6, mitigation taxonomy) + project discussion : **HW 1 due**{: .label .label-red }
+:	Privacy threat modeling 2 (LINDUNN steps 3–6, mitigation taxonomy) + project discussion 
+	: **HW 1 due**{: .label .label-red }
 
 Sep 11
 :	k-anonymity
