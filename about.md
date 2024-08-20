@@ -31,7 +31,14 @@ Students will work on privacy-related projects in groups of 4-5 students. Each g
 
 ### Grading threshold 
 |Grade    | $A^+$| $A$ | $A^-$| $B^+$ $B$ | B^-$ | $C^+$ | $C$ |
+ ------
 |Threshold| 97 | 93 | 90| 86 | 83 | 80 | 74 | 70|
+
+| Month    | Savings |
+| -------- | ------- |
+| January  | $250    |
+| February | $80     |
+| March    | $420    |
 
 We reserve the right to curve the grades depending on the circumstances.
 
