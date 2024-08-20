@@ -1,11 +1,12 @@
 ---
 title: Course Schedule
 ---
+
 Aug 26
 :	Introduction and overview of the course
 
 Aug 28
-:	Taxonomy of privacy harms : Lecture note [Optional reading](https://scholarship.law.upenn.edu/penn_law_review/vol154/iss3/1/)
+:	Taxonomy of privacy harms + Project discussion: [Optional reading](https://scholarship.law.upenn.edu/penn_law_review/vol154/iss3/1/)
 
 Sep 02
 :	**No class (Labor day)**{: .label .label-purple }
@@ -14,26 +15,27 @@ Sep 04
 :	Privacy threat modeling 1 (LINDDUN, DFD, steps 1–3)
 
 Sep 09
-:	Privacy threat modeling 2 (LINDUNN steps 3–6, mitigation taxonomy) + project discussion 
-	: **HW 1 due**{: .label .label-red }
+:	Privacy threat modeling 2 (LINDUNN steps 3–6, mitigation taxonomy)
 
 Sep 11
-:	k-anonymity
+:	Probability refresher & Introduction to data anonymization to prevent linkage attacks
 
 Sep 16
-:	k-anonymity (cont.)
+:	k-anonymity
 
 Sep 18
-:	k-anonymity (cont.)
+:	k-anonymity (cont.) 
+: **HW 1 released**{: .label .label-green }
 
 Sep 23
-:	l-diversity
+:	Data utility & l-diversity
 
 Sep 25
-:	t-closeness
+:	l-diversity (cont.) & t-closeness
 
 Sep 30
-:	Differential privacy
+:	Data leak from queries & Introduction to  Differential privacy  
+: **HW 1 due**{: .label .label-red }
 
 Oct 02
 :	Differential privacy (cont.)
@@ -48,19 +50,21 @@ Oct 14
 :	**No class (Fall break)**{: .label .label-purple }
 
 Oct 16
-:	Differential privacy (cont.)
+:	Differential privacy (cont.) 
+: **HW 2 released**{: .label .label-green }
 
 Oct 21
-:	Predictive modeling: Terminology, optimization, loss function, Linear regression
+:	Predictive modeling basics
 
 Oct 23
-:	Predictive modeling: Logistic regression, Intro to Feed Forward Network
+:	Regression models, Neural Networks, and Gradient descent
 
 Oct 28
-:	Predictive modeling: Gradient descent and Backpropagation Algorithm
+:	Attacks on ML models 
+: **HW 2 due**{: .label .label-red }
 
 Oct 30
-:	Attacks on ML models
+:	Attacks on ML models (cont.)
 
 Nov 04
 :	Private ML with differential privacy
@@ -72,7 +76,8 @@ Nov 11
 :	**No class (Veterans Day)**{: .label .label-purple }
 
 Nov 13
-:	Causality basics
+:	Causality basics 
+: **HW 3 released**{: .label .label-green }
 
 Nov 18
 :	Causality for privacy
@@ -81,14 +86,19 @@ Nov 20
 :	Causality for privacy (cont.)
 
 Nov 25
-:	Causality for privacy (cont.)
+:	Causality for privacy (cont.) 
+: **HW 3 due**{: .label .label-red }
 
 Nov 27
-:	Causality for privacy (cont.)
+:	Privacy and Fairness 
+: **HW 4 released**{: .label .label-green }
 
 Dec 02
-:	Privacy and Fairness
+:	Privacy and Fairness (cont.)
 
 Dec 04
 :	Privacy and Fairness (cont.)
+
+Dec 11
+:	**HW 4 due**{: .label .label-red }
 
