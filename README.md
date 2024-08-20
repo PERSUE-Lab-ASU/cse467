@@ -10,7 +10,17 @@ seo:
 
 # Course overview
 
-This course is intended to provide students with an introductory understanding of the technical and behavioral mechanisms for information security and privacy. Students will learn how the security and privacy of information can be attacked, and what are the current mitigation strategies in each case. In a semester-long project, students will learn how to apply best practices to enhance privacy and security of a computing system while keeping it usable for the consumers.
+With the rise of data-driven technologies, including machine learning and artificial intelligence-based systems, comes enormous risks to protect the data from unauthorized and inappropriate use. The data comes from our everyday use of digital technologies, as they store all of our interactions, and learn from them. However, that data also reveals intimate details about ourselves, our lives, and our daily activities. Such knowledge is highly privacy sensitive and can be used by unauthorized entities if appropriate safeguarding mechanisms  are not in place. Additionally, ML-based models, which are trained on those data, are vulnerable to adversarial attacks. This course will equip students with theoretical and hands-on knowledge on how to protect private data, and other technologies that are built on those data.
+
+# Learning objectives
+After the end of the semester, you will learn
+- Different definitions of data privacy and security
+- Computational mechanisms to protect data from unauthorized access and use
+- Privacy and security attacks on machine learning-based models and how to prevent them
+- How to build robust machine learning models using a minimal set of features
+- How to incorporate security and privacy into data analytics and machine learning models while retaining data utility
+- Hands-on experience with implementing privacy and security algorithms using popular open-source libraries
+
 
 # Course activities and grading components
 - In-class quizzes
