@@ -22,23 +22,24 @@ Regular class attendance and participation are required unless pre-approved by t
 Important. Excused absences for classes will be given without penalty to the grade in the case of (1) a university-sanctioned event [ACD 304-02]; (2) religious holidays [ACD 304-04]; a list can be found here https://eoss.asu.edu/cora/holidays ]; (3) work performed in the line-of-duty according [SSM 201-18]; Excused absences do not relieve students from responsibility for any part of the course work required during the period of absence.
 
 ## Late submission policy for assignments
-Start early and plan your time well. To account for unavoidable issues, students will get a 2-day extensions for one of the assignments without asking me. This should be reserved for an emergency, there will be no further extension unless prior approval.
+Start early and plan your time well. To account for unavoidable issues, students will get a 2-day extension for one of the assignments without asking me (except for the last homework). This should be reserved for an emergency, there will be no further extension unless prior approval.
 
 ## Course project
 Students will work on privacy-related projects in groups of 4-5 students. Each group will prepare a project report and a poster to present their work.
 
 ## Grading policy
 
-### Grading threshold 
-|Grade    | $A^+$| $A$ | $A^-$| $B^+$ $B$ | B^-$ | $C^+$ | $C$ |
- ------
-|Threshold| 97 | 93 | 90| 86 | 83 | 80 | 74 | 70|
+### Grading components
+| Assignments  | Quizzes  | Project  | Class attendance  |
+|--------------|----------|----------|-------------------|
+|40%           | 25%      | 30%      | 5%
 
-| Month    | Savings |
-| -------- | ------- |
-| January  | $250    |
-| February | $80     |
-| March    | $420    |
+### Grading threshold 
+
+|   |   |   |   |   |   |   |   |    |
+|---|---|---|---|---|---|---|---|----|
+|Grade| A+ | A | A- | B+ | B | B- | C+ | C|
+| Threshold | 97 | 93| 90| 86 | 83 | 80 | 74 | 70
 
 We reserve the right to curve the grades depending on the circumstances.
 
