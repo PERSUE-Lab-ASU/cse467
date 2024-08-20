@@ -8,8 +8,8 @@ description: A listing of all the course staff members.
 
 ## Instructors
 
-Dr. Rakibul Hasan
-Email: rakibul.hasan@asu.edu
+Dr. Rakibul Hasan\
+Email: rakibul.hasan@asu.edu\
 Office hours: TBD
 
 ## Teaching Assistants
