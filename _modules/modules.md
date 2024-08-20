@@ -1,7 +1,6 @@
 ---
 title: Course Schedule
 ---
-
 Aug 26
 :	Introduction and overview of the course
 
@@ -12,16 +11,16 @@ Sep 02
 :	**No class (Labor day)**{: .label .label-purple }
 
 Sep 04
-:	Privacy threat modeling 1 (LINDDUN, DFD, steps 1–3)
+:	Privacy threat modeling using LINDDUN
 
 Sep 09
-:	Privacy threat modeling 2 (LINDUNN steps 3–6, mitigation taxonomy)
+:	Probability refresher
 
 Sep 11
 :	Probability refresher & Introduction to data anonymization to prevent linkage attacks
 
 Sep 16
-:	k-anonymity
+:	k-anonymity **Project proposal due**{: .label .label-orange }
 
 Sep 18
 :	k-anonymity (cont.) 
@@ -54,7 +53,7 @@ Oct 16
 : **HW 2 released**{: .label .label-green }
 
 Oct 21
-:	Predictive modeling basics
+:	Predictive modeling basics **Project intermediate report due**{: .label .label-orange }
 
 Oct 23
 :	Regression models, Neural Networks, and Gradient descent
@@ -99,6 +98,8 @@ Dec 02
 Dec 04
 :	Privacy and Fairness (cont.)
 
+Dec 08
+:	**Project final report due**{: .label .label-orange }
+
 Dec 11
 :	**HW 4 due**{: .label .label-red }
-
