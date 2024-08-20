@@ -49,7 +49,7 @@ Oct 14
 :	**No class (Fall break)**{: .label .label-purple }
 
 Oct 16
-:	Differential privacy (cont.) 
+:	TBD
 : **HW 2 released**{: .label .label-green }
 
 Oct 21
