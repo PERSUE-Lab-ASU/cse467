@@ -11,13 +11,13 @@ Sep 02
 :	**No class (Labor day)**{: .label .label-purple }
 
 Sep 04
-:	Privacy threat modeling using LINDDUN
+:	Introduction to Python programming
 
 Sep 09
 :	Probability refresher
 
 Sep 11
-:	Probability refresher & Introduction to data anonymization to prevent linkage attacks
+: Privacy threat modeling using LINDDUN 
 
 Sep 16
 :	k-anonymity **Project proposal due**{: .label .label-orange }
