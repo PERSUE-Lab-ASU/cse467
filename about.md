@@ -27,6 +27,15 @@ Start early and plan your time well. To account for unavoidable issues, students
 ## Course project
 Students will work on privacy-related projects in groups of 4-5 students. Each group will prepare a project report and a poster to present their work.
 
+## Grading policy
+
+### Grading threshold 
+|Grade    | $A^+$| $A$ | $A^-$| $B^+$ $B$ | B^-$ | $C^+$ | $C$ |
+|Threshold| 97 | 93 | 90| 86 | 83 | 80 | 74 | 70|
+
+We reserve the right to curve the grades depending on the circumstances.
+
+
 ## Plagiarism and Academic Dishonesty
 This is a research-oriented course where collaboration is welcomed. But provide credit where it’s due. Plagiarism or any form of cheating in assignments or projects is subject to serious academic penalty. Students in this class must adhere to ASU’s academic integrity policy, which can be found at https://provost.asu.edu/academic-integrity/policy. Students are responsible for reviewing this policy and understanding each of the areas in which academic dishonesty can occur. In addition, all engineering students are expected to adhere to the ASU Academic Integrity Honor Code. All academic integrity violations are reported to the Fulton Schools of Engineering Academic Integrity Office (AIO). The AIO maintains a record of all violations and has access to academic integrity violations committed in all other ASU colleges/schools.
 
