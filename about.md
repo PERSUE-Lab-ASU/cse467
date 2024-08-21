@@ -30,12 +30,37 @@ Students will work on privacy-related projects in groups of 4-5 students. Each g
 ## Grading policy
 
 ### Grading components
-| Assignments  | Quizzes  | Project  | Class attendance  |
-|--------------|----------|----------|-------------------|
-|40%           | 25%      | 30%      | 5%                |
+**In-class quizzes: 25%**
 
-|  Assignments | Quizzes  |Project|  Class attendance |   |   |   |   |    |
-|---|---|---|---|---|---|---|---|----|
+Short Quizzes will be administered at the beginning or end of every lecture (excluding Lecture 1). They will be short, and mainly aimed at making sure that you were able to follow the material covered during the Lecture on that day or the previous day. The worst-performing 1 Quiz across all lectures will be discarded.
+
+**Assignments 40%**
+
+There will be 4 homework assignments that will involve various tasks: programming, mathematical problem solving, designing system prototypes following privacy and security principles, explaining concepts taught in the course, and so on. Written assignments will be graded based on the clarity and validity of your arguments and analysis. You can submit one assignment up to 48 hours late without any penalty. 10% points will be subtracted for every 24-hour delay. Three best-scoring assignments will be counted toward your grade.
+
+**Term project 30%**
+
+Teams of 2–4 students will work on a novel, potentially impactful, and interesting research project. The project should involve any combination of the activities: implementing prototypes, conducting experiments, collecting and analyzing data, literature review, and so on. You will submit a report describing your research, results, and conclusions. 
+The project will be graded based on 
+1. Importance of the problem studied/potential impact of the solution
+2. Novelty of the problem or solution, or both.
+3. The scientific validity of the methodology, how well you conducted your research,  and the completeness of your work.
+4. Quality of the writing, your ability to motivate your research, clarity in presenting the methods, drawing conclusions from your results, synthesizing knowledge and contextualizing findings from prior research, as well as its conciseness.
+
+**Project milestones**
+
+You will complete the project in multiple milestones, and each milestone will be graded *independently* of the other parts.
+1. Proposal (5): By the end of Week 3, submit a short (2-page max) proposal of the project. Content:
+    1. Name of the project team and names of students on the team
+    2. Problem statement, Research questions and hypotheses (if any), or expected contribution
+    3. Study methods: Prototyping, Data Analysis, Survey or Interview, and so on.
+    4. If implementation-focused, explain what technology/resources you will use, and how you will evaluate the implemented system.
+    5. Data collection: describe the type of quantitative and/or qualitative data you expect to collect, if you plan to conduct user studies, how will you develop the questionnaire?
+    6. Data analysis: what quantitative and/or qualitative approaches do you expect to use to analyze your data
+    7. Collaboration plan: How often will the team meet? How will you communicate? How do you expect to divide up the work?
+3. Intermediate project report (10):  Provide a progress report (max 3 pages) with intermediate results by the end of Week 8. By that time, you should be able to complete at least 30% of what you had proposed to do. Explain unresolved issues and challenges, how will you resolve them? Provide a timeline to complete the remaining tasks and write the project report. How will you distribute the workload among the team members?
+4. Final report (20): Extend the status report with all results, discuss, interpret, and contextualize the results, and draw conclusions from them.  
+
 
 
 ### Grading threshold 
