@@ -61,6 +61,19 @@ You will complete the project in multiple milestones, and each milestone will be
 3. Intermediate project report (10):  Provide a progress report (max 3 pages) with intermediate results by the end of Week 8. By that time, you should be able to complete at least 30% of what you had proposed to do. Explain unresolved issues and challenges, how will you resolve them? Provide a timeline to complete the remaining tasks and write the project report. How will you distribute the workload among the team members?
 4. Final report (20): Extend the status report with all results, discuss, interpret, and contextualize the results, and draw conclusions from them.  
 
+**Tips about the final project**
+
+1. You should start thinking about the final project very soon and form a team with those who have similar interests.
+2. Some projects from another similar course have been listed on Canvas that you can use as examples of interesting topics.
+3. You may find ideas for possible project topics by “glancing ahead” at the course’s topics for future weeks. If some topic seems interesting but you are not very familiar with it, talk with me or the TAs.
+4. You may also find ideas by checking websites such as EPIC (consumer rights
+advocacy group: http://www.epic.org/) or IAPP (Privacy consortium: http://www.privacyassociation.org/), or Common Sense Media (https://www.commonsense.org/).
+5. Other resources 
+    * https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/bes2.1745
+    * https://nishanthjkumar.com/A-Beginner's-Guide-to-Undergrad-CS-Research/
+    * https://www.bu.edu/synapse/2009/04/27/tips-n-tricks-part-i/
+    * https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005484
+
 
 
 ### Grading threshold 
