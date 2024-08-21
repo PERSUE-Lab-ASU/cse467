@@ -64,10 +64,9 @@ You will complete the project in multiple milestones, and each milestone will be
 **Tips about the final project**
 
 1. You should start thinking about the final project very soon and form a team with those who have similar interests.
-2. Some projects from another similar course have been listed on Canvas that you can use as examples of interesting topics.
+2. We will discuss some project ideas in the class as examples of interesting topics.
 3. You may find ideas for possible project topics by “glancing ahead” at the course’s topics for future weeks. If some topic seems interesting but you are not very familiar with it, talk with me or the TAs.
-4. You may also find ideas by checking websites such as EPIC (consumer rights
-advocacy group: http://www.epic.org/) or IAPP (Privacy consortium: http://www.privacyassociation.org/), or Common Sense Media (https://www.commonsense.org/).
+4. You may also find ideas by checking websites such as [Markup](https://themarkup.org/series/privacy), [EPIC](http://www.epic.org/), [IAPP Privacy consortium](http://www.privacyassociation.org/), [Common Sense Media]https://www.commonsense.org/), and Future of [Privacy Forum](fpf.org).
 5. Other resources 
     * https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/bes2.1745
     * https://nishanthjkumar.com/A-Beginner's-Guide-to-Undergrad-CS-Research/
