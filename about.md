@@ -38,9 +38,11 @@ Short Quizzes will be administered at the beginning or end of every lecture (exc
 
 There will be 4 homework assignments that will involve various tasks: programming, mathematical problem solving, designing system prototypes following privacy and security principles, explaining concepts taught in the course, and so on. Written assignments will be graded based on the clarity and validity of your arguments and analysis. You can submit one assignment up to 48 hours late without any penalty. 10% points will be subtracted for every 24-hour delay. Three best-scoring assignments will be counted toward your grade.
 
-**Term project 30%**
+**Research project 30%**
 
-Teams of 2–4 students will work on a novel, potentially impactful, and interesting research project. The project should involve any combination of the activities: implementing prototypes, conducting experiments, collecting and analyzing data, literature review, and so on. You will submit a report describing your research, results, and conclusions. 
+Teams of 2–4 students will work on a novel, potentially impactful, and interesting research project. The project should involve any combination of the activities: implementing prototypes, conducting experiments, collecting and analyzing data, and writing a report. **The goal of this research-oriented project is to generate new scientific knowledge (not just building tools)**.
+
+You will submit a report describing your research, results, and conclusions. 
 The project will be graded based on 
 1. Importance of the problem studied/potential impact of the solution
 2. Novelty of the problem or solution, or both.
