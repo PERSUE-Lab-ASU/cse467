@@ -32,7 +32,7 @@ Students will work on privacy-related projects in groups of 4-5 students. Each g
 ### Grading components
 | Assignments  | Quizzes  | Project  | Class attendance  |
 |--------------|----------|----------|-------------------|
-|40%           | 25%      | 30%      | 5%                |
+
 
 ### Grading threshold 
 
