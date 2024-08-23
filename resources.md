@@ -4,6 +4,8 @@ title: Resources
 description: Course resources
 ---
 
+[Tutorial](tutorial/_build/html/intro.html)
+
 # Books
 - [The Algorithmic Foundations of Differential Privacy](https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf)
 - [Programming Differential Privacy](https://programming-dp.com/)
