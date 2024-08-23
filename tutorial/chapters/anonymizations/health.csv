@@ -1,0 +1,12 @@
+Name,SSN,Marital status,Sex,DOB,Zip,Ethnicity,Problem
+--,--,Divorced,Male,1995-12-21,2139,Asian,Hypertension
+--,--,Divorced,Female,1996-06-27,2139,Asian,Obesity
+--,--,Married,Female,1996-08-24,2139,Asian,Chest pain
+--,--,Married,Female,1996-09-22,2139,Asian,Obesity
+--,--,Married,Male,1995-08-11,2148,Black,Hypertension
+--,--,Married,Male,1995-09-20,2138,Black,Shortness of breath
+--,--,Married,Female,1996-08-07,2141,Black,Shortness of breath
+--,--,Married,Male,1995-07-23,2141,Black,Obesity
+--,--,Single,Female,1996-04-24,2138,White,Chest pain
+--,--,Single,Male,1995-02-18,2138,White,Obesity
+--,--,Widow,Female,1996-09-16,2142,White,Shortness of breath

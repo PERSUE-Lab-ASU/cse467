@@ -1,0 +1,12 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+options:
+  numbered: true
+chapters:
+  - file: chapters/anonymizations/intro.ipynb
+  - file: chapters/anonymizations/k-anon.ipynb
+  - file: chapters/anonymizations/utility.ipynb
+  - file: chapters/anonymizations/other-techniques.ipynb

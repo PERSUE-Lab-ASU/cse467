@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Differential Privacy &#8212; Data and Information Privacy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/dp/0-dp-main';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data and Information Privacy</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../anonymizations/intro.html">1. Anonymization techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anonymizations/k-anon.html">2. K-anonymity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anonymizations/utility.html">3. Data utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anonymizations/other-techniques.html">4. Other anonymization techniques</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapters/dp/0-dp-main.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/dp/0-dp-main.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Differential Privacy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attack-model">Attack model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#neighboring-datasets">Neighboring datasets</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#privacy-loss">Privacy Loss</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#epsilon-differential-privacy"><span class="math notranslate nohighlight">\(\epsilon-\)</span>Differential Privacy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bounded-and-unbounded-dp">Bounded and Unbounded DP</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acheiving-differential-privacy">Acheiving Differential Privacy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-laplace-mechanism">The Laplace mechanism</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="differential-privacy">
+<h1>Differential Privacy<a class="headerlink" href="#differential-privacy" title="Link to this heading">#</a></h1>
+<section id="attack-model">
+<h2>Attack model<a class="headerlink" href="#attack-model" title="Link to this heading">#</a></h2>
+<p>Explain when DP is necessary.</p>
+<p>Point out that DP only protects membership status.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">adult</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../datasets/adult_with_pii.csv&#39;</span><span class="p">)</span><span class="c1">#[[&quot;age&quot;, &quot;education&quot;, &quot;marital status&quot;, &quot;occupation&quot;,</span>
+                                                          <span class="c1">#&quot;relationship&quot;,&quot;native-country&quot;,  &quot;workclass&quot;, &quot;fnlwgt&quot;, &quot;education-num&quot;, &quot;capital-gain&quot;, &quot;capital-loss&quot;, &quot;hours-per-week&quot;,</span>
+                                                <span class="c1">#           &quot;race&quot;, &quot;gender&quot;,  &quot;salary&quot;]]</span>
+<span class="c1">#colums=[&#39;workclass&#39;, &#39;fnlwgt&#39;,  &#39;education&#39;,  &#39;education-num      marital-status         occupation   relationship   race   sex  capital-gain  capital-loss  hours-per-week native-country income</span>
+<span class="n">adult</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">adult</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../datasets/adult_with_pii.csv&#39;</span><span class="p">)</span><span class="c1">#[[&quot;age&quot;, &quot;education&quot;, &quot;marital status&quot;, &quot;occupation&quot;,</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>                                                           <span class="c1">#&quot;relationship&quot;,&quot;native-country&quot;,  &quot;workclass&quot;, &quot;fnlwgt&quot;, &quot;education-num&quot;, &quot;capital-gain&quot;, &quot;capital-loss&quot;, &quot;hours-per-week&quot;,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>                                                 <span class="c1">#           &quot;race&quot;, &quot;gender&quot;,  &quot;salary&quot;]]</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1">#colums=[&#39;workclass&#39;, &#39;fnlwgt&#39;,  &#39;education&#39;,  &#39;education-num      marital-status         occupation   relationship   race   sex  capital-gain  capital-loss  hours-per-week native-country income</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">adult</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="nn">File /usr/local/lib/python3.9/site-packages/pandas/util/_decorators.py:311,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">305</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">306</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">arguments</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">308</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">309</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">311</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/lib/python3.9/site-packages/pandas/io/parsers/readers.py:586,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">571</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">572</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">573</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">582</span>     <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">},</span>
+<span class="g g-Whitespace">    </span><span class="mi">583</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">586</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/lib/python3.9/site-packages/pandas/io/parsers/readers.py:482,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">479</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">481</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">482</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">484</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">485</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File /usr/local/lib/python3.9/site-packages/pandas/io/parsers/readers.py:811,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">808</span> <span class="k">if</span> <span class="s2">&quot;has_index_names&quot;</span> <span class="ow">in</span> <span class="n">kwds</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">809</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="ne">--&gt; </span><span class="mi">811</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/lib/python3.9/site-packages/pandas/io/parsers/readers.py:1040,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1036</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1037</span>         <span class="sa">f</span><span class="s2">&quot;Unknown engine: </span><span class="si">{</span><span class="n">engine</span><span class="si">}</span><span class="s2"> (valid options are </span><span class="si">{</span><span class="n">mapping</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="si">}</span><span class="s2">)&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1038</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span> <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1040</span> <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py:51,</span> in <span class="ni">CParserWrapper.__init__</span><span class="nt">(self, src, **kwds)</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;usecols&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">usecols</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="c1"># open handles</span>
+<span class="ne">---&gt; </span><span class="mi">51</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span> <span class="c1"># Have to pass int, would break tests using TextReader directly otherwise :(</span>
+
+<span class="nn">File /usr/local/lib/python3.9/site-packages/pandas/io/parsers/base_parser.py:222,</span> in <span class="ni">ParserBase._open_handles</span><span class="nt">(self, src, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span> <span class="k">def</span> <span class="nf">_open_handles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">src</span><span class="p">:</span> <span class="n">FilePathOrBuffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span><span class="sd">     Let the readers open IOHandles after they are done with their potential raises.</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">222</span>     <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span>         <span class="n">src</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span>         <span class="s2">&quot;r&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">225</span>         <span class="n">encoding</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">226</span>         <span class="n">compression</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">227</span>         <span class="n">memory_map</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">228</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">229</span>         <span class="n">errors</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span>     <span class="p">)</span>
+
+<span class="nn">File /usr/local/lib/python3.9/site-packages/pandas/io/common.py:702,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">697</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">698</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
+<span class="g g-Whitespace">    </span><span class="mi">699</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">701</span>         <span class="c1"># Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">702</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">707</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">708</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">709</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">710</span>         <span class="c1"># Binary mode</span>
+<span class="g g-Whitespace">    </span><span class="mi">711</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../datasets/adult_with_pii.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="definitions">
+<h2>Definitions<a class="headerlink" href="#definitions" title="Link to this heading">#</a></h2>
+<section id="neighboring-datasets">
+<h3>Neighboring datasets<a class="headerlink" href="#neighboring-datasets" title="Link to this heading">#</a></h3>
+<p>Two datasets <span class="math notranslate nohighlight">\(D_1\)</span> and <span class="math notranslate nohighlight">\(D_2\)</span> are neighbors if they differ in at most one record (i.e., one row). Thus, either <span class="math notranslate nohighlight">\(D_1\)</span> has at most one more (or less) row than <span class="math notranslate nohighlight">\(D_2\)</span>, or at most one row in <span class="math notranslate nohighlight">\(D_1\)</span> has values that are different than <span class="math notranslate nohighlight">\(D_2\)</span>. We write <span class="math notranslate nohighlight">\(|D_1 - D_2|\leq 1\)</span></p>
+<a class="reference internal image-reference" href="chapters/dp/figs/neighbor-datasets.png" id="neighbor-datasets"><img alt="chapters/dp/figs/neighbor-datasets.png" id="neighbor-datasets" src="chapters/dp/figs/neighbor-datasets.png" style="height: 150px;" /></a>
+<p>For example, in <a class="reference internal" href="#neighbor-datasets"><span class="std std-ref">figure</span></a>, <span class="math notranslate nohighlight">\(D_2\)</span> can be obtained by deleting one row from <span class="math notranslate nohighlight">\(D_1\)</span> (or <span class="math notranslate nohighlight">\(D_1\)</span> can be obtained by adding one row to <span class="math notranslate nohighlight">\(D_2\)</span>) and thus they are neighbors. <span class="math notranslate nohighlight">\(D_1\)</span> and <span class="math notranslate nohighlight">\(D_3\)</span> has the same number of rows, but the values in (exactly) one row is different, thus they are also neighbors. Note that, you can obtain <span class="math notranslate nohighlight">\(D_3\)</span> by first deleting the last row from <span class="math notranslate nohighlight">\(D_1\)</span> and then adding one row in the resulting dataset; thus, this replacement operation can be thought of as a combination of a deletion and an addition operations (i.e., two operations in total).</p>
+</section>
+</section>
+<section id="privacy-loss">
+<h2>Privacy Loss<a class="headerlink" href="#privacy-loss" title="Link to this heading">#</a></h2>
+<p>privacy loss= <span class="math notranslate nohighlight">\(ln{\frac{P(M(D_1)=t)}{P(M(D_2)=t)}}\)</span></p>
+<section id="epsilon-differential-privacy">
+<h3><span class="math notranslate nohighlight">\(\epsilon-\)</span>Differential Privacy<a class="headerlink" href="#epsilon-differential-privacy" title="Link to this heading">#</a></h3>
+<p>A <em>randomized</em> mechanism (or algorithm) <span class="math notranslate nohighlight">\(M\)</span> satisfies <span class="math notranslate nohighlight">\(\epsilon\)</span>-differential privacy if and only if for any two neighboring datasets <span class="math notranslate nohighlight">\(D_1\)</span> and <span class="math notranslate nohighlight">\(D_2\)</span>, the following condition is satisfied</p>
+<p><span class="math notranslate nohighlight">\(\forall S \in Range(M): P(M(D_1) \in S) \leq e^{\epsilon} P(M(D_2) \in S)\)</span></p>
+<p>where <span class="math notranslate nohighlight">\(\epsilon \leq 0\)</span> and <span class="math notranslate nohighlight">\(Range(M)\)</span> denotes the set of all possible outputs of the algorithm <span class="math notranslate nohighlight">\(M\)</span>.</p>
+<p>This defition can be written as</p>
+<p><span class="math notranslate nohighlight">\(\forall S \in Range(M): \frac{P(M(D_1) \in S)}{ P(M(D_2) \in S)} \leq e^{\epsilon}\)</span></p>
+<p>where  <span class="math notranslate nohighlight">\(\frac{0}{0}=1\)</span></p>
+<p>The important implication of this definition is that <span class="math notranslate nohighlight">\(M\)</span>’s output will be pretty much the same, with or without the data of any specific individual. That means, since <span class="math notranslate nohighlight">\(M\)</span> is randomized, the built-in randomness is “enough” to prevent someone from guessing, after seeing the output, which dataset was used to compute that output. Imagine that, if your data is present in <span class="math notranslate nohighlight">\(D_1\)</span> but not in <span class="math notranslate nohighlight">\(D_2\)</span>, an adversary won’t be able to tell whether or not your data was present in the
+input dataset.</p>
+<p><strong>Note:</strong> The mechanism <span class="math notranslate nohighlight">\(M\)</span> is differentially private (if it satisfies the above condition), not the datasets.</p>
+<p><strong>Note:</strong> The parameter <span class="math notranslate nohighlight">\(\epsilon\)</span> dictates how much privacy you get: smaller values mean that when algorithm <span class="math notranslate nohighlight">\(M\)</span> is applied on <span class="math notranslate nohighlight">\(D_1\)</span> and <span class="math notranslate nohighlight">\(D_2\)</span>, the outcomes are similar (i.e., more privacy) than larger values.</p>
+</section>
+<section id="bounded-and-unbounded-dp">
+<h3>Bounded and Unbounded DP<a class="headerlink" href="#bounded-and-unbounded-dp" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="acheiving-differential-privacy">
+<h2>Acheiving Differential Privacy<a class="headerlink" href="#acheiving-differential-privacy" title="Link to this heading">#</a></h2>
+<p>Recall that the goal is to make an algorithm differentially private, i.e., the algorithm gives <em>similar</em> outputs for neighboring datastets. How do we acheive this? The most popular mechanism is to add noise to the outcomes, so that they become similar enough. There are multiple ways to select the noise, we will explore some of them below.</p>
+<section id="the-laplace-mechanism">
+<h3>The Laplace mechanism<a class="headerlink" href="#the-laplace-mechanism" title="Link to this heading">#</a></h3>
+<p>Let’s consider a query on the census data: “How many individuals in the dataset are 40 years old or older?”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adult</span><span class="p">[</span><span class="n">adult</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">40</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7161
+</pre></div>
+</div>
+</div>
+</div>
+<p>How can we add enough noise to satisfy the DP property, but not too much that the answer becomes useless? Laplace mechanism is one of the most popular ways to achieve DP in such cases. Here, we add some noise, sampled from the Laplace distribution, to the actual query output, and return the noisy result. If the actual query function is denoted by <span class="math notranslate nohighlight">\(f\)</span> that computes the query using dataset <span class="math notranslate nohighlight">\(D\)</span>, then the noisy return value becomes <span class="math notranslate nohighlight">\(f(D)+ L\)</span>, where <span class="math notranslate nohighlight">\(L\)</span> is the Laplace noise. Since the noise is sampled from a distribution, each time we call the query function, a different amount of noise will be added. Thus, the whole mechanism becomes randomized, and, DP also requires a randomized algorithm. The final question is, how to appropriately set  the parameters of the Laplace function, so that when we add noise from it, we can satisfy the DP condition?</p>
+<p>The Laplace distribution for a zero mean is given by <span class="math notranslate nohighlight">\(L(b)=\frac{1}{2b} e^{-\frac{|x|}{b}}\)</span> where <span class="math notranslate nohighlight">\(b\)</span> is the variance parameter. To satisfy DP, we set <span class="math notranslate nohighlight">\(b= \frac{\Delta}{\epsilon}\)</span>. So the noisy output becomes <span class="math notranslate nohighlight">\(f(D)+L(\frac{\Delta}{\epsilon})\)</span> . This whole randomized mechanism can be represented as <span class="math notranslate nohighlight">\(M(D, \epsilon, \Delta) = f(D)+L(\frac{\Delta}{\epsilon})\)</span>, where <span class="math notranslate nohighlight">\(M\)</span> is the randomized mechanism that takes a dataset, the privacy budget, and sensitivity of the query function, and produces a <span class="math notranslate nohighlight">\(\epsilon\)</span>-differentially private outcome.</p>
+<p>For counting queries the sensitivity is 1: if a query counts the number of rows in the dataset with a particular property, and then we modify exactly one row of the dataset, then the query’s output can change by at most 1.
+Thus we can achieve differential privacy for our example query by using the Laplace mechanism with sensitivity 1 and an
+<span class="math notranslate nohighlight">\(\epsilon\)</span> of our choosing.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sensitivity</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="c1"># Get the differentially private count of adults who are older than 40 years. </span>
+<span class="c1"># Note that each call produces slightly different result, and each of them are different, but pretty close to the original value.</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">adult</span><span class="p">[</span><span class="n">adult</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">40</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">laplace</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sensitivity</span><span class="o">/</span><span class="n">epsilon</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7152
+7150
+7161
+7164
+7152
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now see that a larger value of <span class="math notranslate nohighlight">\(\epsilon\)</span> produces more different outcomes (hence, the otucomes may not be “similar enough” to each other to protect privacy)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sensitivity</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">adult</span><span class="p">[</span><span class="n">adult</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">40</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">laplace</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sensitivity</span><span class="o">/</span><span class="n">epsilon</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7160
+7161
+7160
+7161
+7161
+</pre></div>
+</div>
+</div>
+</div>
+<p>Below is the analytical proof that Laplace mechanism satisfies DP condition.</p>
+<p>For <span class="math notranslate nohighlight">\(D_1\)</span>, the Laplace noise will be <span class="math notranslate nohighlight">\(L(\frac{\Delta}{\epsilon}) = \frac{\epsilon}{2\Delta} e^{-(\frac{\epsilon |f(D_1)|}{\Delta})}\)</span></p>
+<p>For <span class="math notranslate nohighlight">\(D_2\)</span>, the Laplace noise will be <span class="math notranslate nohighlight">\(L(\frac{\Delta}{\epsilon}) = \frac{\epsilon}{2\Delta} e^{-(\frac{\epsilon |f(D_2)|}{\Delta})}\)</span></p>
+<p>For the DP mechanism <span class="math notranslate nohighlight">\(M\)</span>, the randomization part comes from this Laplace noise sampling, all other steps in the mechanism are deterministic. Thus, the final outcome of <span class="math notranslate nohighlight">\(M\)</span>, which is random or probabilistic, will follow the same distribution as the Laplace function. Tat means</p>
+<p><span class="math notranslate nohighlight">\(\frac{P(M(D_1))\in S}{P(M(D_2))\in S} =  \frac{e^{-(\frac{\epsilon|f(D_1)|} {\Delta})}}{e^{-(\frac{\epsilon|f(D_2)|} {\Delta})}} = e^{-\frac{\epsilon (|f(D_2)| - |f(D_1|)} {\Delta}} \leq e^{\epsilon}\)</span></p>
+<p>citing <span id="id1">[<a class="reference internal" href="#id1048" title="Frank McSherry and Kunal Talwar. Mechanism Design via Differential Privacy. In 48th Annual IEEE Symposium on Foundations of Computer Science (FOCS'07), 94–103. October 2007. doi:10.1109/FOCS.2007.66.">MT07</a>]</span></p>
+<p><span id="id2">[<a class="reference internal" href="#id1048" title="Frank McSherry and Kunal Talwar. Mechanism Design via Differential Privacy. In 48th Annual IEEE Symposium on Foundations of Computer Science (FOCS'07), 94–103. October 2007. doi:10.1109/FOCS.2007.66.">MT07</a>]</span></p>
+<div class="docutils container" id="id3">
+<div role="list" class="citation-list">
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HCA+22<span class="fn-bracket">]</span></span>
+<p>Rakibul Hasan, Cristobal Cheyre, Yong-Yeol Ahn, Roberto Hoyle, and Apu Kapadia. The impact of viral posts on visibility and behavior: A longitudinal study of scientists on twitter. In <em>Proceedings of the International AAAI Conference on Web and Social Media (ICWSM '22), to Appear</em>. June 2022.</p>
+</div>
+<div class="citation" id="id944" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LLV07<span class="fn-bracket">]</span></span>
+<p>Ninghui Li, Tiancheng Li, and Suresh Venkatasubramanian. T-Closeness: Privacy Beyond k-Anonymity and l-Diversity. In <em>2007 IEEE 23rd International Conference on Data Engineering</em>, 106–115. Istanbul, April 2007. IEEE. <a class="reference external" href="https://doi.org/10.1109/ICDE.2007.367856">doi:10.1109/ICDE.2007.367856</a>.</p>
+</div>
+<div class="citation" id="id1046" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LLSY17<span class="fn-bracket">]</span></span>
+<p>Ninghui Li, Min Lyu, Dong Su, and Weining Yang. <em>Differential Privacy: From Theory to Practice</em>. Springer, 2017.</p>
+</div>
+<div class="citation" id="id943" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MKGV07<span class="fn-bracket">]</span></span>
+<p>Ashwin Machanavajjhala, Daniel Kifer, Johannes Gehrke, and Muthuramakrishnan Venkitasubramaniam. \emph L -diversity: Privacy beyond \emph k -anonymity. <em>ACM Transactions on Knowledge Discovery from Data</em>, 1(1):3, March 2007. <a class="reference external" href="https://doi.org/10.1145/1217299.1217302">doi:10.1145/1217299.1217302</a>.</p>
+</div>
+<div class="citation" id="id1048" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MT07<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
+<p>Frank McSherry and Kunal Talwar. Mechanism Design via Differential Privacy. In <em>48th Annual IEEE Symposium on Foundations of Computer Science (FOCS'07)</em>, 94–103. October 2007. <a class="reference external" href="https://doi.org/10.1109/FOCS.2007.66">doi:10.1109/FOCS.2007.66</a>.</p>
+</div>
+<div class="citation" id="id1047" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>NA21<span class="fn-bracket">]</span></span>
+<p><strong>missing publisher in programmingDP2021</strong></p>
+</div>
+<div class="citation" id="id916" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SS98<span class="fn-bracket">]</span></span>
+<p><strong>missing journal in samarati1998protecting</strong></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/dp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attack-model">Attack model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#neighboring-datasets">Neighboring datasets</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#privacy-loss">Privacy Loss</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#epsilon-differential-privacy"><span class="math notranslate nohighlight">\(\epsilon-\)</span>Differential Privacy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bounded-and-unbounded-dp">Bounded and Unbounded DP</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acheiving-differential-privacy">Acheiving Differential Privacy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-laplace-mechanism">The Laplace mechanism</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rakibul Hasan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4. Other anonymization techniques &#8212; Data and Information Privacy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/anonymizations/other-techniques';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="3. Data utility" href="utility.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data and Information Privacy</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Anonymization techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="k-anon.html">2. K-anonymity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utility.html">3. Data utility</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Other anonymization techniques</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapters/anonymizations/other-techniques.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/anonymizations/other-techniques.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Other anonymization techniques</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-of-k-anonymity">4.1. Limitations of k-anonymity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneity-attack">4.2. Homogeneity attack</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background-knowledge-attack">4.3. Background Knowledge Attack.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-diversity">4.4. <span class="math notranslate nohighlight">\(l-\)</span>diversity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distinct-l-diversity">4.4.1. Distinct <span class="math notranslate nohighlight">\(l-\)</span>diversity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-l-diversity">4.4.2. Entropy <span class="math notranslate nohighlight">\(l-\)</span>diversity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-c-l-diversity">4.4.3. Recursive <span class="math notranslate nohighlight">\((c,l)-\)</span>diversity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-of-l-diversity">4.4.4. Limitations of <span class="math notranslate nohighlight">\(l-\)</span>diversity</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#difficult-to-achieve-or-drastic-loss-of-data-utility">4.4.4.1. Difficult to achieve or drastic loss of data utility</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-diversity-cannot-prevent-attribute-disclosure">4.4.5. <span class="math notranslate nohighlight">\(l-\)</span>diversity cannot prevent attribute disclosure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t-closeness">4.5. <span class="math notranslate nohighlight">\(t-\)</span>closeness</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="other-anonymization-techniques">
+<h1><span class="section-number">4. </span>Other anonymization techniques<a class="headerlink" href="#other-anonymization-techniques" title="Link to this heading">#</a></h1>
+<section id="limitations-of-k-anonymity">
+<h2><span class="section-number">4.1. </span>Limitations of k-anonymity<a class="headerlink" href="#limitations-of-k-anonymity" title="Link to this heading">#</a></h2>
+<p>There are multiple possible attacks on a k-anonymized dataset. Below, we explain two, with examples taken from <span id="id1">[<a class="reference internal" href="../dp/0-dp-main.html#id943" title="Ashwin Machanavajjhala, Daniel Kifer, Johannes Gehrke, and Muthuramakrishnan Venkitasubramaniam. \emph L -diversity: Privacy beyond \emph k -anonymity. ACM Transactions on Knowledge Discovery from Data, 1(1):3, March 2007. doi:10.1145/1217299.1217302.">MKGV07</a>]</span>. We will use the following table and it’s 4-anonymized version.</p>
+<p><img alt="figure" src="../../_images/l-diversity-example.png" /></p>
+</section>
+<section id="homogeneity-attack">
+<h2><span class="section-number">4.2. </span>Homogeneity attack<a class="headerlink" href="#homogeneity-attack" title="Link to this heading">#</a></h2>
+<p>Alice and Bob are antagonistic neighbors. One day Bob falls ill and is taken by ambulance to the hospital. Having seen the ambulance, Alice sets out to discover what disease Bob is suffering from. Alice discovers the 4-anonymous table of current inpatient records published by the hospital, and so she knows that one of the records in this table contains Bob’s data. Since Alice is Bob’s neighbor, she knows that Bob is a 31-year old American male who lives in the zip code 13053. Therefore, Alice knows that Bob’s record number is 9, 10, 11, or 12. All of those patients have the same medical condition (cancer), and so Alice concludes that Bob has cancer.
+Thus, k-Anonymity can create groups that leak information due to lack of diversity in the sensitive attribute.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>k-anonymous tables can create groups of k people (equivalent classes) who have the same value (i.e., homogeneous) for the sensitive attribute. Identifying this group membership can leak sensitive data.</p>
+</div>
+<p>Such leaks are common. Consider a health dataset of 60,000 people where health condition (sensitive attribute) can take three distinct values and is uncorrelated with other nonsensitive attributes. A 5-anonymized version of this table will have about 12,000 groups. Probabilistically, in 1 out of every 81 groups, all group members will have the same health condition (no diversity). Thus, about 148 groups with no diversity, there will be about 740 people with data leak due to a homogeneity attack.</p>
+<p>The remedy to this problem is obvious: k-anonymized tables should also ensure diversity in the equivalent classes in terms of values of the sensitive attribute. That is, all tuples with the same values of their quasi-identifiers should have diverse values for their sensitive attributes. But how to achieve this diversity?</p>
+</section>
+<section id="background-knowledge-attack">
+<h2><span class="section-number">4.3. </span>Background Knowledge Attack.<a class="headerlink" href="#background-knowledge-attack" title="Link to this heading">#</a></h2>
+<p>Alice has a pen-friend named Umeko who is admitted to the same hospital as Bob and whose patient records also appear in the table shown above. Alice knows that Umeko is a 21-year old Japanese
+female who currently lives in zip code 13068. Based on this information, Alice learns that Umeko’s information is contained in record number 1,2,3, or 4. Without additional information, Alice is not sure whether Umeko caught a virus or has heart disease. However, it is well known that Japanese have an
+extremely low incidence of heart disease. Therefore Alice concludes with near certainty that Umeko has a viral infection. <strong>Thus, k-Anonymity does not protect against attacks based on background knowledge.</strong> Access to such background knowledge is also common. For example, employers might be required to publish vaccination or medical history of all state employees.</p>
+<p>Having diverse values in the anonymized tables can tackle both attacks. In particular, we will look at <span class="math notranslate nohighlight">\(l-\)</span>diversity.</p>
+<p>sec_l_div=</p>
+</section>
+<section id="l-diversity">
+<h2><span class="section-number">4.4. </span><span class="math notranslate nohighlight">\(l-\)</span>diversity<a class="headerlink" href="#l-diversity" title="Link to this heading">#</a></h2>
+<p>An equivalence class (<span class="math notranslate nohighlight">\(EC\)</span>) is <span class="math notranslate nohighlight">\(l-\)</span>diverse if it contains at least <span class="math notranslate nohighlight">\(l\)</span> <em>well-represented</em> values for the sensitive attribute 𝚂. A table is <span class="math notranslate nohighlight">\(l-\)</span>diverse if every <span class="math notranslate nohighlight">\(EC\)</span> is <span class="math notranslate nohighlight">\(l-\)</span>diverse.</p>
+<p>Note the stress on <em>well-represented</em>, what does it mean and how to ensure this property? We will see variants in <span class="math notranslate nohighlight">\(l-\)</span>diversity based on different definitions of well-representedness.</p>
+<section id="distinct-l-diversity">
+<h3><span class="section-number">4.4.1. </span>Distinct <span class="math notranslate nohighlight">\(l-\)</span>diversity<a class="headerlink" href="#distinct-l-diversity" title="Link to this heading">#</a></h3>
+<p>This variant ensures that each equivalent class has at least <span class="math notranslate nohighlight">\(l\)</span> distinct values for the sensitive attribute. The following 4-anonymous table has been converted to a <span class="math notranslate nohighlight">\(3-\)</span>diverse table (<span class="math notranslate nohighlight">\(l=3\)</span>) since each <span class="math notranslate nohighlight">\(EC\)</span> has three values for the <code class="docutils literal notranslate"><span class="pre">Condition</span></code> column.</p>
+<figure class="align-default" id="diversity">
+<a class="reference internal image-reference" href="../../_images/3-diversity.png"><img alt="../../_images/3-diversity.png" src="../../_images/3-diversity.png" style="height: 250px;" /></a>
+</figure>
+<p>Unfortunately, distinct  <span class="math notranslate nohighlight">\(l-\)</span>diversity does not prevent probabilistic inference attacks due to skewness in the sensitive attribute. Because distinct <span class="math notranslate nohighlight">\(l-\)</span>diversity only requires that there must be <span class="math notranslate nohighlight">\(l\)</span> different values, but do not specify their (relative) frequency, an equivalence class may have one value appear much more frequently than other values. For example, consider the following scenario where Bob’s medical record was published as a 2-diverse table, but the equivalence class (with <span class="math notranslate nohighlight">\(N=100\)</span>) he belongs to is extremely skewed, with all but one record having a pre-existing medical condition (it still satisfies 2-diversity condition). By looking at this table, an insurance company may infer that BOB has that condition (since <span class="math notranslate nohighlight">\(99\%\)</span> people in this class had it) regardless of his actual health status. This potentially wrong inference can violate BOB’s privacy and subject him to a higher insurance premium.</p>
+</section>
+<hr class="docutils" />
+<section id="entropy-l-diversity">
+<h3><span class="section-number">4.4.2. </span>Entropy <span class="math notranslate nohighlight">\(l-\)</span>diversity<a class="headerlink" href="#entropy-l-diversity" title="Link to this heading">#</a></h3>
+<p>Another notion capturing the idea of well-represented class is based on entropy, which measures the <em>uncertainty</em> of the values under a class. Formally, the entropy of an equivalent class <span class="math notranslate nohighlight">\(EC\)</span> is defined to be.
+<span class="math notranslate nohighlight">\(H(EC) = - \sum_{s\in S} p(EC,s) \log{(p(EC,s))}\)</span> where <span class="math notranslate nohighlight">\(S\)</span> is the domain of the sensitive attribute, and
+<span class="math notranslate nohighlight">\(p(EC, s)\)</span> is the fraction of records in <span class="math notranslate nohighlight">\(EC\)</span> that have sensitive value <span class="math notranslate nohighlight">\(s\)</span>.<br />
+An equivalent class (<span class="math notranslate nohighlight">\(EC\)</span>) is <em>entropy <span class="math notranslate nohighlight">\(l-\)</span>diverse</em> if <span class="math notranslate nohighlight">\(H(EC)\geq \log(l)\)</span><br />
+A table is entropy <span class="math notranslate nohighlight">\(l-\)</span>diverse if each <span class="math notranslate nohighlight">\(EC\)</span> is entropy <span class="math notranslate nohighlight">\(l-\)</span>diverse.</p>
+<p>Intuitively, since having more diverse values increase entropy (uncertainty), this notion indirectly encourages diversity of sensitive attribute values within equivalent classes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Constraint: the full table must have <span class="math notranslate nohighlight">\(H(T)\geq \log(l)\)</span> because for any two equivalent classes (<span class="math notranslate nohighlight">\(E_a, E_b\)</span>) in the anonymized table: <span class="math notranslate nohighlight">\(H(T) \geq min(H(E_a), H(E_b))\)</span></p>
+</div>
+<p>Because of the above constraint, entropy <span class="math notranslate nohighlight">\(l-\)</span>diversity is considered too strict and often cannot be satisfied. Below is another variant that is less strict.</p>
+</section>
+<section id="recursive-c-l-diversity">
+<h3><span class="section-number">4.4.3. </span>Recursive <span class="math notranslate nohighlight">\((c,l)-\)</span>diversity<a class="headerlink" href="#recursive-c-l-diversity" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(m\)</span> be the number of values in an equivalence class, and <span class="math notranslate nohighlight">\(r_i\)</span>  (<span class="math notranslate nohighlight">\(1\leq i \leq m\)</span>) be the number of times that the ith most frequent sensitive value appears in an equivalence class <span class="math notranslate nohighlight">\(EC\)</span>.
+Then, <span class="math notranslate nohighlight">\(EC\)</span> has recursive <span class="math notranslate nohighlight">\((c, l)-\)</span>diversity if <span class="math notranslate nohighlight">\(r_1 &lt; c(r_l+ r_{(l+1)}+ \dots + r_m)\)</span> where <span class="math notranslate nohighlight">\(c\)</span> is a constant.</p>
+<p>A table is said to have recursive <span class="math notranslate nohighlight">\((c, l)-\)</span>diversity if all of its equivalence classes have recursive  <span class="math notranslate nohighlight">\((c, l)-\)</span>diversity.</p>
+<p>Intuitively, this definition requires that the count of the most frequent item must be less than a constant multiple of the total count of the least <span class="math notranslate nohighlight">\((m-l)\)</span> frequent items. This condition makes sure that the most frequent value does not appear too frequently, and the less frequent values do not appear too rarely. We control how strictly this condition is applied by selecting <span class="math notranslate nohighlight">\(c\)</span> and <span class="math notranslate nohighlight">\(l\)</span> appropriately: larger <span class="math notranslate nohighlight">\(l\)</span> and smaller <span class="math notranslate nohighlight">\(c\)</span> values correspond to tighter bounds.</p>
+<p>Consider the second <span class="math notranslate nohighlight">\(EC\)</span> (rows 5 to 8) in the following table.</p>
+<p><img alt="figure" src="../../_images/4-anon-table.png" /></p>
+<p>Here,\ 
+three different values of sensitive attribute (<code class="docutils literal notranslate"><span class="pre">{cancer,</span> <span class="pre">flu,</span> <span class="pre">heart</span> <span class="pre">disease}</span></code>), so,   <span class="math notranslate nohighlight">\(m=3\)</span><br />
+the most frequent value <code class="docutils literal notranslate"><span class="pre">Flu</span></code> appears twice, so <span class="math notranslate nohighlight">\(r_1 = 2\)</span>,<br />
+the second and third most frequent values, both <code class="docutils literal notranslate"><span class="pre">cancer</span></code> and <code class="docutils literal notranslate"><span class="pre">heart</span> <span class="pre">disease</span></code> appears once, so <span class="math notranslate nohighlight">\(r_2 = 1 = r_3\)</span>\ 
+Then, <span class="math notranslate nohighlight">\(EC\)</span> has recursive <span class="math notranslate nohighlight">\((c, 2)-\)</span>diversity if <span class="math notranslate nohighlight">\(r_1 &lt; c(r_2 + r_3)\)</span>, or if <span class="math notranslate nohighlight">\(2&lt;c*2\)</span>. To make it true, <span class="math notranslate nohighlight">\(c\)</span> must be selected <span class="math notranslate nohighlight">\(c&gt;1\)</span>, any smaller value will further tighten the condition which cannot be satisfied. Note also that, a larger <span class="math notranslate nohighlight">\(l=3\)</span> will also tighten the condition because then <span class="math notranslate nohighlight">\(2&lt;c*1\)</span> has to be true, that will require further increasing <span class="math notranslate nohighlight">\(c\)</span> to gain some flexibility. The parameter <span class="math notranslate nohighlight">\(l\)</span> decides how many of the <em>least</em> frequent counts to consider, the larger the value, the smaller their total (<span class="math notranslate nohighlight">\(r_l+\dots +r_m\)</span>) will be, and the more stricter the condition will be; the parameter <span class="math notranslate nohighlight">\(c\)</span> can be increassed to satisfy the condition.</p>
+</section>
+<section id="limitations-of-l-diversity">
+<h3><span class="section-number">4.4.4. </span>Limitations of <span class="math notranslate nohighlight">\(l-\)</span>diversity<a class="headerlink" href="#limitations-of-l-diversity" title="Link to this heading">#</a></h3>
+<section id="difficult-to-achieve-or-drastic-loss-of-data-utility">
+<h4><span class="section-number">4.4.4.1. </span>Difficult to achieve or drastic loss of data utility<a class="headerlink" href="#difficult-to-achieve-or-drastic-loss-of-data-utility" title="Link to this heading">#</a></h4>
+<p>Consider a dataset containing a sensitive attribute, whether someone was infected with a rare disease (binary: Y or N), which was true for only <span class="math notranslate nohighlight">\(1\%\)</span> of the total entries (<span class="math notranslate nohighlight">\(N=100,000\)</span>). In this case, an entry is not sensitive if the value is <code class="docutils literal notranslate"><span class="pre">N</span></code> for the sensitive column, which is true for <span class="math notranslate nohighlight">\(99\%\)</span> of them. Thus achieving <span class="math notranslate nohighlight">\(l-\)</span>diversity is unnecessary here cor equivalent classes containing only <code class="docutils literal notranslate"><span class="pre">N</span></code> values. But, if one wants to have 2-diversity, then there can be only 100 equivalent classes because there are only 100 entries with <code class="docutils literal notranslate"><span class="pre">Y</span></code> value and they need to be distributed in across the equivalent classes. Such restrictions also can drastically reduce data utility. Consider the following table with only one quasi-identifier, Zip:</p>
+<p><img alt="figure" src="../../_images/l-diversity-application.png" /></p>
+<p>The middle table shows equivalent classes with two entries each, they satisfy 2-diversity. But the values of zipcode have to be almost completely removed before publishing. If we wanted to apply entropy <span class="math notranslate nohighlight">\(l-\)</span>diversity, we would have to choose a small <span class="math notranslate nohighlight">\(l\)</span> since the total entropy of the table is small (remember <span class="math notranslate nohighlight">\(H(T)\geq \log(l)\)</span>).</p>
+</section>
+</section>
+<section id="l-diversity-cannot-prevent-attribute-disclosure">
+<h3><span class="section-number">4.4.5. </span><span class="math notranslate nohighlight">\(l-\)</span>diversity cannot prevent attribute disclosure<a class="headerlink" href="#l-diversity-cannot-prevent-attribute-disclosure" title="Link to this heading">#</a></h3>
+<p><strong>Skewness Attack:</strong> If the overall distribution of a sensitive attribute in a table is skewed, satisfying  -diversity does not prevent attribute disclosure.
+Consider again the example table with 100000 entries where <span class="math notranslate nohighlight">\(1\%\)</span> have positive values for a disease. Suppose that one equivalence class has an equal number of positive records
+and negative records. Even though it satisfies distinct 2-diversity, entropy
+2-diversity, and any recursive <span class="math notranslate nohighlight">\((c, 2)-\)</span>diversity requirement for any value of <span class="math notranslate nohighlight">\(c\)</span>, it presents a serious privacy risk, because anyone in that <span class="math notranslate nohighlight">\(EC\)</span> would be considered to have 50% possibility of being positive, as compared with the 1% of the overall population. Consider another equivalence class that has 49 positive records and only 1 negative record. It is distinct 2-diverse and with a larger entropy than the overall table, it satisfies any Entropy <span class="math notranslate nohighlight">\(l-\)</span>diversity that can be imposed even though anyone in the equivalence class would be considered <span class="math notranslate nohighlight">\(98\%\)</span> positive, rather than <span class="math notranslate nohighlight">\(1\%\)</span> percent. In fact, this equivalence class has exactly the same diversity as a class that has 1 positive and 49 negative records, even though the two classes present very differen levels of privacy risks.</p>
+<p><strong>Similarity Attack:</strong> If the sensitive attribute values in an equivalence class are distinct but semantically similar, an adversary can learn important information. Consider the orginal table on the left and the 3-anonymized version on the right, which also satisfies 3-diversity for <code class="docutils literal notranslate"><span class="pre">Disease</span></code> attribute. But it has similar type of values for all entries in the first <span class="math notranslate nohighlight">\(EC\)</span>, thus if one can assume that someone in that category suffers from a stomach related issue (this attack is similar to the Homogeneity attack we saw earlier).</p>
+<p><img alt="figure" src="../../_images/similarity-attack.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>** Intuition behind the limitations of l-diversity**</p>
+<p>Intuitively, distributions that have the same level of (syntactic) diversity may provide very different levels of privacy, because</p>
+<ol class="arabic simple">
+<li><p>There are semantic relationships among the attribute value</p></li>
+<li><p>Different values have very different levels of sensitivity, e.g., headache can have vastly different level of sensitivity than cancer/diabetic</p></li>
+<li><p>Different distributions at the equivalent class level and population level can have adverse effects</p></li>
+</ol>
+</div>
+</section>
+</section>
+<section id="t-closeness">
+<h2><span class="section-number">4.5. </span><span class="math notranslate nohighlight">\(t-\)</span>closeness<a class="headerlink" href="#t-closeness" title="Link to this heading">#</a></h2>
+<p>Intuitively, the loss of privacy can be measured by how much information was gained by an attacker after observing a dataset (compared to before observing it). The <span class="math notranslate nohighlight">\(t-\)</span>closeness captures this notion and attempts to minimize the information gain. Let’s try to understand this concept with examples.</p>
+<p>Consider that before seeing any data, an attacker might have some prior belief about someone’s health condition. We can represent this prior belief with a probability distribution over the possible conditions. Let’s assume that there are 100 possible conditions: <code class="docutils literal notranslate"><span class="pre">{heart</span> <span class="pre">disease,</span> <span class="pre">viral</span> <span class="pre">infection,</span> <span class="pre">cancer,</span> <span class="pre">flu,</span> <span class="pre">...}</span></code> and the prior belief <span class="math notranslate nohighlight">\(\alpha\)</span> is a uniform probability distribution over this set. Now, if a health research center publishes the number of people suffering from different conditions (and no other information), then attacker’s prior belief will change after seeing this data. For example, previously the attacker believed that the probablity of someone suffering from cancer is <span class="math notranslate nohighlight">\(.01\%\)</span>, but in reality, cancer might be much more frequent (unfortunately). Thus, the attacker’s belief about an individual will also change. Let’s assume this new belief is <span class="math notranslate nohighlight">\(\beta\)</span> (and the population level distribution of health condition is <span class="math notranslate nohighlight">\(Q\)</span>). Thus, the change in information gain is <span class="math notranslate nohighlight">\(\beta - \alpha\)</span>. Note that, this information gain is about the whole population, i.e., the attacker learns new information at the population level, but did not learn anything new about any specific individual.</p>
+<p>Now consider that the attacker’s belief will again change after seeing the anonymized table shown below:</p>
+<p><img alt="figure" src="../../_images/4-anon-table.png" /></p>
+<p>If the new belief is <span class="math notranslate nohighlight">\(\gamma\)</span> then the information gain is <span class="math notranslate nohighlight">\(\gamma - \beta\)</span>. This gain is about individual people. For example, if someone belongs to the second equivalent class (entries 5 to 8), the probability of that person suffering from cancer is <span class="math notranslate nohighlight">\(1/4\)</span>, heart disease is <span class="math notranslate nohighlight">\(1/2\)</span>, viral infection is <span class="math notranslate nohighlight">\(0\)</span>, and so on. If the health condition distribution in this equivalent class is represented by <span class="math notranslate nohighlight">\(P\)</span>, then <span class="math notranslate nohighlight">\(\gamma - \beta\)</span> will be proportional to the distance between <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(l-\)</span>diversity attempted to diversify (syntactic) values of a sensitive attribute within an equivalent class, but did not consider the distribution of those values in a class relative to its distribution in the whole table. In other words, it attempted to limit what an attacker could learn after looking at an <span class="math notranslate nohighlight">\(EC\)</span> beyond what population level knowledge they already had (i.e. <span class="math notranslate nohighlight">\(\gamma - \alpha\)</span>). It tried to achieve this increasing the entropy of each <span class="math notranslate nohighlight">\(EC\)</span> by diversifying values, and the uniform distribution has the highest entropy! But within an <span class="math notranslate nohighlight">\(EC\)</span>, if the values are not semantically diverse, than privacy can still be violated, as we saw above.</p>
+<p>To tackle these cases, another measure of privacy, <span class="math notranslate nohighlight">\(t-\)</span>closeness (<span id="id2">[<a class="reference internal" href="../dp/0-dp-main.html#id944" title="Ninghui Li, Tiancheng Li, and Suresh Venkatasubramanian. T-Closeness: Privacy Beyond k-Anonymity and l-Diversity. In 2007 IEEE 23rd International Conference on Data Engineering, 106–115. Istanbul, April 2007. IEEE. doi:10.1109/ICDE.2007.367856.">LLV07</a>]</span>), was proposed. It achieves privacy by forcing that distributions of values withing equivalent classess follow the population distribution. For example, if <code class="docutils literal notranslate"><span class="pre">Cancer</span></code> is found in <span class="math notranslate nohighlight">\(20\%\)</span> of the entries in the whole dataset, then it should be roughly in <span class="math notranslate nohighlight">\(20\%\)</span> entries in each of the classes. Formally,</p>
+<p><strong><span class="math notranslate nohighlight">\(t-\)</span>closeness:</strong> An equivalence class has <span class="math notranslate nohighlight">\(t-\)</span>closeness if the distance between the distribution of a sensitive attribute in this class and the distribution of the attribute in the whole table is no more than a threshold. In other words: <span class="math notranslate nohighlight">\(d(P,Q)\leq t\)</span> where <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are distributions of values in the the whole table and an equivalent class, and <span class="math notranslate nohighlight">\(d\)</span> is the distance function between two distributions. A table satisfies <span class="math notranslate nohighlight">\(t-\)</span>closeness if all equivalent classes satisfy <span class="math notranslate nohighlight">\(t-\)</span>closeness.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(t-\)</span>closeness aims to keep the value distributions in each equivalent class <strong>close</strong> to the population distribution.</p>
+</div>
+<p>Minimizing this distance limits the amount of individual-specific information an observer can learn, even if population level distribution is publicly available. Thus, <span class="math notranslate nohighlight">\(t-\)</span>closeness minimizes <span class="math notranslate nohighlight">\(\gamma - \beta\)</span> (as opposed to <span class="math notranslate nohighlight">\(\gamma -  \alpha\)</span> like <span class="math notranslate nohighlight">\(t-\)</span>closeness).</p>
+<p>How to minimize the <span class="math notranslate nohighlight">\(d(P,Q)\leq t\)</span>? This requires some measure of how close <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are. We will use the <em>Earth mover’s distance</em> (or EMD) for this purpose. Given two distributions of numeric values, <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span>,<br />
+<span class="math notranslate nohighlight">\(D(P, Q) = \frac{1}{m-1} (|r_1| + |r_1+r_2| + \dots + |r_1+r_2 + \dots + r_{m-1}|)\)</span><br />
+where <span class="math notranslate nohighlight">\(r_i=p_i-q_i, (i = 1, 2, \dots, m)\)</span></p>
+<p>$Q= {3k, 4k, 5k, 6k, 7k, 8k, 9k, 10k, 11k}<span class="math notranslate nohighlight">\(\
+\)</span>P1 = {3k, 4k, 5k}<span class="math notranslate nohighlight">\(, and \)</span>P2 = {6k, 8k, 11k}$\</p>
+<p>$D(P_1, Q) =</p>
+<hr class="docutils" />
+<p><strong>Other resources</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=Upb8jqlsbFM">Youtube video on <span class="math notranslate nohighlight">\(t-\)</span>closeness</a></p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>References</strong></p>
+<span class="target" id="id3"></span></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/anonymizations"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="utility.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Data utility</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-of-k-anonymity">4.1. Limitations of k-anonymity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneity-attack">4.2. Homogeneity attack</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background-knowledge-attack">4.3. Background Knowledge Attack.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-diversity">4.4. <span class="math notranslate nohighlight">\(l-\)</span>diversity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distinct-l-diversity">4.4.1. Distinct <span class="math notranslate nohighlight">\(l-\)</span>diversity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-l-diversity">4.4.2. Entropy <span class="math notranslate nohighlight">\(l-\)</span>diversity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-c-l-diversity">4.4.3. Recursive <span class="math notranslate nohighlight">\((c,l)-\)</span>diversity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-of-l-diversity">4.4.4. Limitations of <span class="math notranslate nohighlight">\(l-\)</span>diversity</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#difficult-to-achieve-or-drastic-loss-of-data-utility">4.4.4.1. Difficult to achieve or drastic loss of data utility</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-diversity-cannot-prevent-attribute-disclosure">4.4.5. <span class="math notranslate nohighlight">\(l-\)</span>diversity cannot prevent attribute disclosure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t-closeness">4.5. <span class="math notranslate nohighlight">\(t-\)</span>closeness</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rakibul Hasan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

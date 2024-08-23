@@ -1,0 +1,1377 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2. K-anonymity &#8212; Data and Information Privacy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/anonymizations/k-anon';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3. Data utility" href="utility.html" />
+    <link rel="prev" title="1. Anonymization techniques" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Data and Information Privacy</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Anonymization techniques</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. K-anonymity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utility.html">3. Data utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other-techniques.html">4. Other anonymization techniques</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapters/anonymizations/k-anon.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/chapters/anonymizations/k-anon.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>K-anonymity</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linking-attack">2.1. Linking attack</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">2.1.1. Definitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achieving-k-anonymity">2.1.2. Achieving k-anonymity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#domain-generalization">2.1.3. Domain generalization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#domain-tuple-generalization">2.1.4. Domain tuple generalization</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-domain-generalization-to-achieve-k-anonymity">2.1.4.1. How to use domain generalization to achieve k-anonymity?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#suppression">2.2. Suppression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finally-achieving-a-k-minimal-generalization">2.2.1. Finally, achieving a <span class="math notranslate nohighlight">\(k\)</span>-minimal generalization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-domain-versus-local-cell-generalization">2.2.2. Full domain versus local (cell) generalization</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="k-anonymity">
+<h1><span class="section-number">2. </span>K-anonymity<a class="headerlink" href="#k-anonymity" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">health</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;health.csv&#39;</span><span class="p">)[[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;SSN&#39;</span><span class="p">,</span> <span class="s1">&#39;Marital status&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;DOB&#39;</span><span class="p">,</span> <span class="s1">&#39;Zip&#39;</span><span class="p">,</span> <span class="s1">&#39;Ethnicity&#39;</span><span class="p">,</span> <span class="s1">&#39;Problem&#39;</span> <span class="p">]]</span>
+<span class="n">voter</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;voter.csv&#39;</span><span class="p">)[[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Address&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;DOB&#39;</span><span class="p">,</span> <span class="s1">&#39;Zip&#39;</span> <span class="p">]]</span>
+<span class="n">health</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;Ethnicity&#39;</span><span class="p">:</span> <span class="s1">&#39;Race&#39;</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># health.Zip=health.Zip.astype(str)</span>
+
+<span class="c1"># health[list(set(health.columns).difference(set([&#39;Unnamed: 0&#39;])))].to_csv(&#39;health.csv&#39;, index=False)</span>
+<span class="c1"># voter[list(set(voter.columns).difference(set([&#39;Unnamed: 0&#39;])))].to_csv(&#39;voter.csv&#39;, index=False)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>SSN</th>
+      <th>Marital status</th>
+      <th>Sex</th>
+      <th>DOB</th>
+      <th>Zip</th>
+      <th>Race</th>
+      <th>Problem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Divorced</td>
+      <td>Male</td>
+      <td>1995-12-21</td>
+      <td>2139</td>
+      <td>Asian</td>
+      <td>Hypertension</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Divorced</td>
+      <td>Female</td>
+      <td>1996-06-27</td>
+      <td>2139</td>
+      <td>Asian</td>
+      <td>Obesity</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Married</td>
+      <td>Female</td>
+      <td>1996-08-24</td>
+      <td>2139</td>
+      <td>Asian</td>
+      <td>Chest pain</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Married</td>
+      <td>Female</td>
+      <td>1996-09-22</td>
+      <td>2139</td>
+      <td>Asian</td>
+      <td>Obesity</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Married</td>
+      <td>Male</td>
+      <td>1995-08-11</td>
+      <td>2148</td>
+      <td>Black</td>
+      <td>Hypertension</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Married</td>
+      <td>Male</td>
+      <td>1995-09-20</td>
+      <td>2138</td>
+      <td>Black</td>
+      <td>Shortness of breath</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Married</td>
+      <td>Female</td>
+      <td>1996-08-07</td>
+      <td>2141</td>
+      <td>Black</td>
+      <td>Shortness of breath</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Married</td>
+      <td>Male</td>
+      <td>1995-07-23</td>
+      <td>2141</td>
+      <td>Black</td>
+      <td>Obesity</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Single</td>
+      <td>Female</td>
+      <td>1996-04-24</td>
+      <td>2138</td>
+      <td>White</td>
+      <td>Chest pain</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Single</td>
+      <td>Male</td>
+      <td>1995-02-18</td>
+      <td>2138</td>
+      <td>White</td>
+      <td>Obesity</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Widow</td>
+      <td>Female</td>
+      <td>1996-09-16</td>
+      <td>2142</td>
+      <td>White</td>
+      <td>Shortness of breath</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="linking-attack">
+<h2><span class="section-number">2.1. </span>Linking attack<a class="headerlink" href="#linking-attack" title="Link to this heading">#</a></h2>
+<p>Imagine that we have a public health dataset with the following attributes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">health</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>SSN</th>
+      <th>Marital status</th>
+      <th>Sex</th>
+      <th>DOB</th>
+      <th>Zip</th>
+      <th>Ethnicity</th>
+      <th>Problem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Divorced</td>
+      <td>Male</td>
+      <td>1995-12-21</td>
+      <td>2139</td>
+      <td>Asian</td>
+      <td>Hypertension</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Divorced</td>
+      <td>Female</td>
+      <td>1996-06-27</td>
+      <td>2139</td>
+      <td>Asian</td>
+      <td>Obesity</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Married</td>
+      <td>Female</td>
+      <td>1996-08-24</td>
+      <td>2139</td>
+      <td>Asian</td>
+      <td>Chest pain</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Married</td>
+      <td>Female</td>
+      <td>1996-09-22</td>
+      <td>2139</td>
+      <td>Asian</td>
+      <td>Obesity</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Married</td>
+      <td>Male</td>
+      <td>1995-08-11</td>
+      <td>2148</td>
+      <td>Black</td>
+      <td>Hypertension</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Married</td>
+      <td>Male</td>
+      <td>1995-09-20</td>
+      <td>2138</td>
+      <td>Black</td>
+      <td>Shortness of breath</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Married</td>
+      <td>Female</td>
+      <td>1996-08-07</td>
+      <td>2141</td>
+      <td>Black</td>
+      <td>Shortness of breath</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Married</td>
+      <td>Male</td>
+      <td>1995-07-23</td>
+      <td>2141</td>
+      <td>Black</td>
+      <td>Obesity</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Single</td>
+      <td>Female</td>
+      <td>1996-04-24</td>
+      <td>2138</td>
+      <td>White</td>
+      <td>Chest pain</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>--</td>
+      <td>--</td>
+      <td>Single</td>
+      <td>Male</td>
+      <td>1995-02-18</td>
+      <td>2138</td>
+      <td>White</td>
+      <td>Obesity</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The dataset has private or sensitive information, such as people’s marital status or their medical problems. If this dataset is made public, people whose records belong here can face privacy issues such as social embarasments or an increased insurance premium because of their health condition. Usually, if published, such datasets are redacted by, e.g., removing, masking, or encrypting (direct) identifiers. Note that the identifying columns in the datset– Full name and SSN –have been removed. It only this dataset is published, then there is no risk of leaking people’s medical condition since this information cannot be linked to any person. We would say that this datset has been pseudonymized.</p>
+<p>Unfortunately, other sources of information can be used to deanonymize these records. Consider a voter registration database with the following attributes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">voter</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Sex</th>
+      <th>DOB</th>
+      <th>Zip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Peter Sparks</td>
+      <td>PSC 4583, Box 5237 APO AP 43391</td>
+      <td>Male</td>
+      <td>1995-12-21</td>
+      <td>2139</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Lauren Edwards</td>
+      <td>0488 Jeffrey Parkways Suite 732 Brianshire, IN...</td>
+      <td>Female</td>
+      <td>1996-06-27</td>
+      <td>2139</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Angela Gibson</td>
+      <td>31809 Olson Wells Apt. 580 Mullinsshire, TN 22229</td>
+      <td>Female</td>
+      <td>1996-08-24</td>
+      <td>2139</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Krista Weaver</td>
+      <td>4387 Garcia Camp Adamside, TX 25896</td>
+      <td>Female</td>
+      <td>1996-09-22</td>
+      <td>2139</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>David Davis</td>
+      <td>6179 Amber Square Suite 057 North Patriciaton,...</td>
+      <td>Male</td>
+      <td>1995-08-11</td>
+      <td>2148</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Rachel Hernandez</td>
+      <td>556 Flores Port Apt. 367 West Kylie, DE 02268</td>
+      <td>Male</td>
+      <td>1995-09-20</td>
+      <td>2138</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Gina Donaldson</td>
+      <td>20516 Castro Cliff Parkerside, AK 66539</td>
+      <td>Female</td>
+      <td>1996-08-07</td>
+      <td>2141</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Crystal Mcconnell</td>
+      <td>67874 Matthews Hills\nEatonmouth, IN 54155</td>
+      <td>Male</td>
+      <td>1995-07-23</td>
+      <td>2141</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Samantha Jackson</td>
+      <td>42804 Miller Hill\nJohnstad, RI 94607</td>
+      <td>Female</td>
+      <td>1996-04-24</td>
+      <td>2138</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Kevin Davis</td>
+      <td>5480 Mitchell Extensions Apt. 941 Hillbury, CT...</td>
+      <td>Male</td>
+      <td>1995-02-18</td>
+      <td>2138</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>By joining the two data tables based on the common columns (that is, <em>DOB</em>, <em>Sex</em>, and <em>Zip</em>), we can figure out the names (and addresses) of people in the first database, and then we can learn what medical problem each of them had! A pretty severe privacy violation, since one can locate the person with name and address, and know their medical condition!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">health</span><span class="p">,</span> <span class="n">voter</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;DOB&#39;</span><span class="p">,</span>	<span class="s1">&#39;Sex&#39;</span><span class="p">,</span>	<span class="s1">&#39;Zip&#39;</span><span class="p">])[[</span><span class="s1">&#39;Name_y&#39;</span><span class="p">,</span> <span class="s1">&#39;Address&#39;</span><span class="p">,</span> <span class="s1">&#39;Problem&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name_y</th>
+      <th>Address</th>
+      <th>Problem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Peter Sparks</td>
+      <td>PSC 4583, Box 5237 APO AP 43391</td>
+      <td>Hypertension</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Lauren Edwards</td>
+      <td>0488 Jeffrey Parkways Suite 732 Brianshire, IN...</td>
+      <td>Obesity</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Angela Gibson</td>
+      <td>31809 Olson Wells Apt. 580 Mullinsshire, TN 22229</td>
+      <td>Chest pain</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>David Davis</td>
+      <td>6179 Amber Square Suite 057 North Patriciaton,...</td>
+      <td>Hypertension</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Rachel Hernandez</td>
+      <td>556 Flores Port Apt. 367 West Kylie, DE 02268</td>
+      <td>Shortness of breath</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Gina Donaldson</td>
+      <td>20516 Castro Cliff Parkerside, AK 66539</td>
+      <td>Shortness of breath</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Crystal Mcconnell</td>
+      <td>67874 Matthews Hills\nEatonmouth, IN 54155</td>
+      <td>Obesity</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Samantha Jackson</td>
+      <td>42804 Miller Hill\nJohnstad, RI 94607</td>
+      <td>Chest pain</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Kevin Davis</td>
+      <td>5480 Mitchell Extensions Apt. 941 Hillbury, CT...</td>
+      <td>Obesity</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Joana Wood</td>
+      <td>8904 Corey Fort Apt. 957 Franklinchester, SC 2...</td>
+      <td>Shortness of breath</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The columns on which we performed the merge operation, i.e., the columns that are, in combination, unique to each person, are called quasi-identifiers, since they combinedly can identify a person. Note that none of these columns can individually identify a person because they are not unique to a person. Compare that to explicit or direct identifiers, such as full name and SSN, that can individually identify a person. Likewise, you mobile phone has a uniqune ID (actually multiple) that is likely get harvested by most applications to track you cross-apps and over time.</p>
+<p>Let’s make these (and other) definitions formal.</p>
+<section id="definitions">
+<h3><span class="section-number">2.1.1. </span>Definitions<a class="headerlink" href="#definitions" title="Link to this heading">#</a></h3>
+<p><strong><u>Attributes (Columns)</u>:</strong> Let <span class="math notranslate nohighlight">\(B(A_1,…,A_n)\)</span> be a table with a finite number of tuples (or rows). The finite set of attributes of <span class="math notranslate nohighlight">\(B\)</span> are <span class="math notranslate nohighlight">\(\{A_1,…,A_n\}\)</span> <span id="id1">[]</span>. For the <em>Health</em> table shown above, the attributes are <code class="docutils literal notranslate"><span class="pre">{Name,</span> <span class="pre">SSN,</span> <span class="pre">Maritalstatus,</span> <span class="pre">Sex,</span> <span class="pre">DOB,</span> <span class="pre">Zip,</span> <span class="pre">Ethnicity,</span> <span class="pre">Problem}</span></code>. Each attribute, also represents a domain of values, from where each of the tuples take value. For example, <em>Sex</em> may represent the domain <em>{Male, Female, non-binary, etc.}</em> and each row takes one value from this domain set. For our case, we assume that each row contains data about one person (and a person appears exactly once).</p>
+<p><strong><u>Quasi-identifiers</u>:</strong>
+Given a population of entities <span class="math notranslate nohighlight">\(U\)</span>,  an entity-specific table <span class="math notranslate nohighlight">\(T(A_1,\dots,A_n)\)</span>,   <span class="math notranslate nohighlight">\(f_c: U\rightarrow T\)</span>,   and  <span class="math notranslate nohighlight">\(f_g: T \rightarrow U'\)</span>, where <span class="math notranslate nohighlight">\(U \subseteq U'\)</span>.  A quasi-identifier of <span class="math notranslate nohighlight">\(T\)</span>, written <span class="math notranslate nohighlight">\(Q_T\)</span>, is a set of attributes <span class="math notranslate nohighlight">\({A_i,\dots,A_j} \subseteq {A_1,\dots,A_n}\)</span> where: <span class="math notranslate nohighlight">\(\exists p_i \in U\)</span> such that <span class="math notranslate nohighlight">\(f_g(f_c(p_i)[Q_T]) = p_i\)</span>.</p>
+<p>For example, a quasi-identifier for the Voter table can be {name, address, Zip, DOB, Sex}.</p>
+<p><strong><u>Sensitive attribute</u>:</strong>
+A sensitive attribute is an attribute whose value for any particular individual must be kept secret from people who have no direct access to the original data. In the above example, the medical condition of a person (the <code class="docutils literal notranslate"><span class="pre">Problem</span></code> attribute) can be considered sensitive.</p>
+</section>
+<section id="achieving-k-anonymity">
+<h3><span class="section-number">2.1.2. </span>Achieving k-anonymity<a class="headerlink" href="#achieving-k-anonymity" title="Link to this heading">#</a></h3>
+<p>To prevent linking attacks as shown below, one way is to make the datasets satisfy k-anonymity before being published. What is the condition for satisfying k-anonymity?</p>
+<p><strong>Satisfying k-anonymity:</strong> Let <span class="math notranslate nohighlight">\(T(A_1,\dots,A_n)\)</span> be a table and <span class="math notranslate nohighlight">\(QI_T\)</span> be the quasi-identifier associated with it. <span class="math notranslate nohighlight">\(T\)</span> satisfies k-anonymity iff each sequence of values in <span class="math notranslate nohighlight">\(T[QI_T]\)</span> appears with at least <span class="math notranslate nohighlight">\(k\)</span> occurrences in <span class="math notranslate nohighlight">\(T[QI_T]\)</span>. In other words, <span class="math notranslate nohighlight">\(T\)</span> must contain every combination of the values for quasi-identifiers at least <span class="math notranslate nohighlight">\(k\)</span> times. Since the quasi-identifiers now refer to <span class="math notranslate nohighlight">\(k\)</span> people, instead of a single person, no (sure) identification can be made.</p>
+<p>For example, in the example below, we have truncated zip codes and replaced DOB with birth year. It now satisfies 2-anonymity (i.e., k=2) because each combination of <code class="docutils literal notranslate"><span class="pre">{Sex,</span> <span class="pre">Zip,</span> <span class="pre">Birth</span> <span class="pre">Year}</span></code> appears at least twice. Thus, these quasi-identifiers do not uniquely identify a person anymore. Consequently, by linking this table with health dataset, no one can learn exactly what medical condition each person suffers from.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k_anon_voter</span> <span class="o">=</span> <span class="n">voter</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">k_anon_voter</span><span class="o">.</span><span class="n">Zip</span><span class="o">=</span><span class="n">k_anon_voter</span><span class="o">.</span><span class="n">Zip</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">k_anon_voter</span><span class="o">.</span><span class="n">Zip</span><span class="o">=</span><span class="n">k_anon_voter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="o">.</span><span class="n">Zip</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">Zip</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">k_anon_voter</span><span class="p">[</span><span class="s1">&#39;Birth Year&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">voter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="o">.</span><span class="n">DOB</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">k_anon_voter</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;DOB&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span><span class="s1">&#39;Zip&#39;</span><span class="p">,</span><span class="s1">&#39;Birth Year&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Sex</th>
+      <th>Zip</th>
+      <th>Birth Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>Krista Weaver</td>
+      <td>4387 Garcia Camp Adamside, TX 25896</td>
+      <td>Female</td>
+      <td>213*</td>
+      <td>1996</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Lauren Edwards</td>
+      <td>0488 Jeffrey Parkways Suite 732 Brianshire, IN...</td>
+      <td>Female</td>
+      <td>213*</td>
+      <td>1996</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Angela Gibson</td>
+      <td>31809 Olson Wells Apt. 580 Mullinsshire, TN 22229</td>
+      <td>Female</td>
+      <td>213*</td>
+      <td>1996</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Samantha Jackson</td>
+      <td>42804 Miller Hill\nJohnstad, RI 94607</td>
+      <td>Female</td>
+      <td>213*</td>
+      <td>1996</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Gina Donaldson</td>
+      <td>20516 Castro Cliff Parkerside, AK 66539</td>
+      <td>Female</td>
+      <td>214*</td>
+      <td>1996</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Joana Wood</td>
+      <td>8904 Corey Fort Apt. 957 Franklinchester, SC 2...</td>
+      <td>Female</td>
+      <td>214*</td>
+      <td>1996</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Peter Sparks</td>
+      <td>PSC 4583, Box 5237 APO AP 43391</td>
+      <td>Male</td>
+      <td>213*</td>
+      <td>1995</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Rachel Hernandez</td>
+      <td>556 Flores Port Apt. 367 West Kylie, DE 02268</td>
+      <td>Male</td>
+      <td>213*</td>
+      <td>1995</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Kevin Davis</td>
+      <td>5480 Mitchell Extensions Apt. 941 Hillbury, CT...</td>
+      <td>Male</td>
+      <td>213*</td>
+      <td>1995</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>David Davis</td>
+      <td>6179 Amber Square Suite 057 North Patriciaton,...</td>
+      <td>Male</td>
+      <td>214*</td>
+      <td>1995</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Crystal Mcconnell</td>
+      <td>67874 Matthews Hills\nEatonmouth, IN 54155</td>
+      <td>Male</td>
+      <td>214*</td>
+      <td>1995</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>In the 2-anonymized table, the set of tuples with the same values for the quasi-identifiers form an <em>equivalence class or EQ</em> (it is also called a <span class="math notranslate nohighlight">\(q^*\)</span> block). For example, the first six tuples form <span class="math notranslate nohighlight">\(EQ_1\)</span>, the next two tuples form <span class="math notranslate nohighlight">\(EQ_2\)</span>,  the next three form <span class="math notranslate nohighlight">\(EQ_3\)</span>, and so on. Thus, another way to state a table is k-anonymized is that every equivalent class must have at least <span class="math notranslate nohighlight">\(k\)</span> tuples.</p>
+<p>How do we anonymize datasets this way? There are two methods: <em>Generalization</em> and <em>Suppression</em>, that we explain below.</p>
+</section>
+<section id="domain-generalization">
+<h3><span class="section-number">2.1.3. </span>Domain generalization<a class="headerlink" href="#domain-generalization" title="Link to this heading">#</a></h3>
+<p>Recall that, each attribute or column in a dataset represents a domain (i.e., set of appropriate values). For example, Zipcode can be the set of all US zip codes as the Domain. Records in a  dataset contain specific values from those domain, like 2139 in the voter datset. This domain of these specific values can be labeled as a ground domain, <span class="math notranslate nohighlight">\(D_0\)</span>. To achieve k-anonymity, we will replace these specific values with more generic values, coming from a more general domain. In the above example, we removed the last digit from the zip codes, and the set of these 1-less-digit zipcodes can be labeled as another domain, <span class="math notranslate nohighlight">\(D_1\)</span>. Continuing this generalization step one more time, we can use values from domain <span class="math notranslate nohighlight">\(D_2\)</span> where two digits have been removed. Thus, these domains have a ordered mapping: <span class="math notranslate nohighlight">\(D_0\rightarrow D_1\rightarrow D_2\rightarrow \dots\rightarrow D_n\)</span> which must satisfy two conditions:</p>
+<ol class="arabic simple">
+<li><p>Each domain <span class="math notranslate nohighlight">\(D_i\)</span> has at most one direct generalized domain. Mathematically, <span class="math notranslate nohighlight">\(\forall D_i, D_j , D_z \in D : D_i \leq_D Dj , D_i \leq_D D_z \implies D_j \leq_D D_z \vee D_z \leq_D D_j\)</span></p></li>
+<li><p>The highest level of domain (<span class="math notranslate nohighlight">\(D_n\)</span>) is a singleton set. Thus, for each domain <span class="math notranslate nohighlight">\(D\)</span>, there is a hierarchy of generalization, termed as <em>Domain Generalization Hierarchy</em> or <span class="math notranslate nohighlight">\(DGH_D\)</span>. There exists also a <em>Value Generalization Hierarchy</em> or <span class="math notranslate nohighlight">\(VGH_D\)</span> for domain <span class="math notranslate nohighlight">\(D\)</span> that specifies how to replace a specific value with a generic value.</p></li>
+</ol>
+<p>The following <a class="reference internal" href="#dgh-fig"><span class="std std-ref">Figure</span></a> shows examples of <span class="math notranslate nohighlight">\(DGH_D\)</span> and <span class="math notranslate nohighlight">\(VGH_D\)</span> (taken from <span id="id2">[<a class="reference internal" href="../dp/0-dp-main.html#id916">SS98</a>]</span>).</p>
+<figure class="align-default" id="dgh-fig">
+<a class="reference internal image-reference" href="../../_images/dgh.png"><img alt="../../_images/dgh.png" src="../../_images/dgh.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Example of Domain and Value Generalization Hierarchy</span><a class="headerlink" href="#dgh-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For example, consider domain generalization for marrital status. This attribute can have four values: <span class="math notranslate nohighlight">\(DGM_{M_0}=\)</span> {married, divorced, single, widow}. A one step generalization of the domain gives us: <span class="math notranslate nohighlight">\(DGM_{M_1}\)</span> = {once_married, never_married}. But how a specific value in a table row can be generalized? E.g., which general value from <span class="math notranslate nohighlight">\(DGM_{M_1}\)</span> should replace <code class="docutils literal notranslate"><span class="pre">divorced</span></code>? It cannot be <code class="docutils literal notranslate"><span class="pre">never_married</span></code> and has to be <code class="docutils literal notranslate"><span class="pre">once_married</span></code>. These contstraints can be expressed in the value generalization hierarchy, <span class="math notranslate nohighlight">\(VGH_M\)</span>, which takes the form of a tree where a child node value can be replaced by it’s parent’s value. Thus, a value generalization hierarchy associates with each value in domain <span class="math notranslate nohighlight">\(D_i\)</span> a unique value in domain <span class="math notranslate nohighlight">\(D_j\)</span> direct generalization of <span class="math notranslate nohighlight">\(D_i\)</span>. Also note that in <span class="math notranslate nohighlight">\(DGM_M\)</span>, each domain has only one direct generalization (<span class="math notranslate nohighlight">\(DGM_{M_0}\rightarrow DGM_{M_1}\)</span>). Also, the top level domain for <span class="math notranslate nohighlight">\(DGM_M\)</span> has exactly one value. Thus, it satisfies both the conditions mentioned above.</p>
+</section>
+<section id="domain-tuple-generalization">
+<h3><span class="section-number">2.1.4. </span>Domain tuple generalization<a class="headerlink" href="#domain-tuple-generalization" title="Link to this heading">#</a></h3>
+<p>Since we might generalize multiple attributes in a table (i.e., the quasi-identifier set contains multiple elements), it s convenient to think about generalization of domain tuple (DT) instead of single domain generalization. DT can be represented as a collection of domains: <span class="math notranslate nohighlight">\(&lt;D_1, D_2, \dots, D_n&gt;\)</span>. For example, in the case of health dataset, if the quasi-identifiers include only <code class="docutils literal notranslate"><span class="pre">{Race,</span> <span class="pre">Zip}</span></code> with domains <code class="docutils literal notranslate"><span class="pre">R</span></code> and <code class="docutils literal notranslate"><span class="pre">Z</span></code>, respectively, the tuple containing the domains for these two attributes can be represented as <span class="math notranslate nohighlight">\(&lt;R, Z&gt;\)</span>. As with a single domain, we can define generalization hierarchy for a tuple of domains. Figure <a class="reference internal" href="#dght-fig"><span class="std std-ref">Example of DT generalization hierarchy as lattice structures</span></a> shows the domain tuple generalization hierarchy (<span class="math notranslate nohighlight">\(DGH_{DT}\)</span>) for Race and Zip, and an example (right) of generalization (dotted arrow indicates that intermediate steps were omitted). It defines the different ways in which the domain tuple <span class="math notranslate nohighlight">\(&lt;R, Z&gt;\)</span> can be generalized: each path from DT to the unique maximal element of <span class="math notranslate nohighlight">\(DGH_{DT}\)</span> in the graph describing <span class="math notranslate nohighlight">\(DGH_{DT}\)</span> defines a possible alternative path that can be followed when generalizing a quasi-identifier <code class="docutils literal notranslate"><span class="pre">QI</span> <span class="pre">=</span> <span class="pre">{Race,</span> <span class="pre">Zip}</span></code> of attributes on domains <code class="docutils literal notranslate"><span class="pre">&lt;R,</span> <span class="pre">Z&gt;</span></code>.</p>
+<figure class="align-default" id="dght-fig">
+<a class="reference internal image-reference" href="../../_images/dghT.png"><img alt="../../_images/dghT.png" src="../../_images/dghT.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Example of DT generalization hierarchy as lattice structures</span><a class="headerlink" href="#dght-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For example, from <span class="math notranslate nohighlight">\(&lt;R_0,Z_0&gt;\)</span>, we can move to either <span class="math notranslate nohighlight">\(&lt;R_1,Z_0&gt;\)</span> (i.e., one step generalization for Race but no generalization for Zip) or <span class="math notranslate nohighlight">\(&lt;R_0,Z_1&gt;\)</span> (i.e., one step generalization for Zip only). Following different paths  for race and zip will lead to different generalized versions of the table, as shown in <a class="reference internal" href="#dgh-fig"><span class="std std-ref">Figure</span></a>. PT here denotes the private (original) table. The remaining five tables are all possible generalized tables for PT. With respect to k-anonymity, <span class="math notranslate nohighlight">\(GT_{[0,1]}\)</span> satisfies k-anonymity for k = 1, 2; <span class="math notranslate nohighlight">\(GT_{[1,0]}\)</span> satisfies k-anonymity for k = 1, 2, 3; <span class="math notranslate nohighlight">\(GT_{[0,2]}\)</span> satisfies k-anonymity for k = 1, … , 4, <span class="math notranslate nohighlight">\(GT_{[1,1]}\)</span> satisfies k-anonymity for k = 1, … , 6, and <span class="math notranslate nohighlight">\(GT_{[1,2]}\)</span> satisfies k-anonymity for k = 1, … , 12.</p>
+<figure class="align-default" id="gen-fig">
+<a class="reference internal image-reference" href="../../_images/generalization-example.png"><img alt="../../_images/generalization-example.png" src="../../_images/generalization-example.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Example of generalizing Race and Zip in a table following the DGH and VGH in <a class="reference internal" href="#dgh-fig"><span class="std std-ref">Figure</span></a></span><a class="headerlink" href="#gen-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Thus, using domain tuple generalization, we can convert a table <span class="math notranslate nohighlight">\(T_i\)</span> to a generalized table <span class="math notranslate nohighlight">\(T_j\)</span>. Formally, let <span class="math notranslate nohighlight">\(T_i(A_1, \dots ,A_n)\)</span> and <span class="math notranslate nohighlight">\(T_j(A_1,\dots ,A_n)\)</span> be two tables defined on the same set of attributes. <span class="math notranslate nohighlight">\(T_j\)</span> is a generalization of <span class="math notranslate nohighlight">\(T_i\)</span> (denoted as <span class="math notranslate nohighlight">\(T_i \preceq T_j\)</span>), iff</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(T_i\)</span> have the same number of tuples <span class="math notranslate nohighlight">\(T_j\)</span> (i.e., <span class="math notranslate nohighlight">\(|T_i|\)</span> = <span class="math notranslate nohighlight">\(|T_j|\)</span>)</p></li>
+<li><p>The domain of each attribute <span class="math notranslate nohighlight">\(A_z\)</span> in <span class="math notranslate nohighlight">\(T_j\)</span> is equal to, or is a generalization of, the domain of <span class="math notranslate nohighlight">\(A_z\)</span> in <span class="math notranslate nohighlight">\(T_i\)</span> (i.e., <span class="math notranslate nohighlight">\(A_z \in \{A_1, \dots , A_n\} : dom(A_z, T_i) \leq_D dom(A_z, T_j)\)</span>)</p></li>
+<li><p>It is possible to define a bijective mapping associating each tuple <span class="math notranslate nohighlight">\(t_i\)</span> in <span class="math notranslate nohighlight">\(T_i\)</span> with a tuple <span class="math notranslate nohighlight">\(t_j\)</span> in <span class="math notranslate nohighlight">\(T_j\)</span> such that the value of each attribute <span class="math notranslate nohighlight">\(A_z\)</span> in <span class="math notranslate nohighlight">\(t_j\)</span> is equal to, or is a generalization of, the value of <span class="math notranslate nohighlight">\(A_z\)</span> in <span class="math notranslate nohighlight">\(t_i\)</span>.</p></li>
+</ol>
+<section id="how-to-use-domain-generalization-to-achieve-k-anonymity">
+<h4><span class="section-number">2.1.4.1. </span>How to use domain generalization to achieve k-anonymity?<a class="headerlink" href="#how-to-use-domain-generalization-to-achieve-k-anonymity" title="Link to this heading">#</a></h4>
+<p>Given that we can replace specific values with generic ones, how should we apply this technique in a systematic way? In the above example of voter dataset, we removed the last digit of zip code (i.e., moved from <span class="math notranslate nohighlight">\(Z_0\)</span> to <span class="math notranslate nohighlight">\(Z_1\)</span> in <span class="math notranslate nohighlight">\(DGH_Z\)</span>) and achieved 2-anonymity. But we could also have removed two digits and achieve the same effect (i.e., move from <span class="math notranslate nohighlight">\(Z_0\)</span> to <span class="math notranslate nohighlight">\(Z_2\)</span> in <span class="math notranslate nohighlight">\(DGH_Z\)</span>). Replacing with more (rather than less) general data will never violate the k-anonymity condition for a given k. That is, if we achieve 2-anonymity by using <span class="math notranslate nohighlight">\(Z_1\)</span> domain, we will definitely achieve 2-anonymity by using <span class="math notranslate nohighlight">\(Z_2\)</span> domain. But, using more general data than necessary will reduce the utility of the data, otherwise we could have always used the most generic values to get maximal privacy, but the data will most likely be useless! To achieve k-anonymity for a specific k, we start with the most specific data (that exist in the table) and generalize one domain, one step at a time until we achieve k-anonymity. This concept is captured by the definition of k-minimal generalization. To introduce it we first introduce the notion of distance vector.</p>
+<p><strong>Distance vector:</strong> Let <span class="math notranslate nohighlight">\(T_i(A1, \dots , A_n)\)</span> and <span class="math notranslate nohighlight">\(T_j(A1, \dots ,A_n)\)</span> be two tables such that <span class="math notranslate nohighlight">\(T_i\preceq T_j\)</span>. The distance vector of <span class="math notranslate nohighlight">\(T_j\)</span> from <span class="math notranslate nohighlight">\(T_i\)</span> is the vector <span class="math notranslate nohighlight">\(DV_{i,j} = [d_1, \dots , d_n]\)</span> where each <span class="math notranslate nohighlight">\(d_z, z = 1, \dots , n\)</span>, is the length of the unique path between <span class="math notranslate nohighlight">\(D_z =dom(A_z, T_i)\)</span> and <span class="math notranslate nohighlight">\(dom(A_z , T_j)\)</span> in the domain generalization hierarchy <span class="math notranslate nohighlight">\(DGH_{D_z}\)</span>. In <a class="reference internal" href="#gen-fig"><span class="std std-ref">Figure</span></a>, the distance vectors between PT
+and each of its generalized tables is the vector appearing as a subscript of the table. Similar to a <span class="math notranslate nohighlight">\(DGH_{DT}\)</span>, the corresponding distance vectors can be represented as a lattice (see <a class="reference internal" href="#dist-vector-fig"><span class="std std-ref">Domain generalization hierarchy and corresponding lattice on distance vectors</span></a>)</p>
+<figure class="align-default" id="dist-vector-fig">
+<a class="reference internal image-reference" href="../../_images/distance-vector.png"><img alt="../../_images/distance-vector.png" src="../../_images/distance-vector.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Domain generalization hierarchy and corresponding lattice on distance vectors</span><a class="headerlink" href="#dist-vector-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Definition: k-minimal generalization:</strong> Let <span class="math notranslate nohighlight">\(T_i(A_1, \dots , A_n)\)</span> and <span class="math notranslate nohighlight">\(T_j(A_1,\dots , A_n)\)</span> be two tables such that  <span class="math notranslate nohighlight">\(T_i \preceq T_j\)</span>. <span class="math notranslate nohighlight">\(T_j\)</span> is a k-minimal generalization of <span class="math notranslate nohighlight">\(T_i\)</span> iff</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(T_j\)</span> satisfies k-anonymity</p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall T_z : T_i \preceq T_z\)</span>, <span class="math notranslate nohighlight">\(T_z\)</span> satisfies <em>k-anonymity</em> <span class="math notranslate nohighlight">\(\implies \neg(DV_{i,z}\leq DV_{i,j})\)</span>.</p></li>
+</ol>
+<p>Intuitively, <span class="math notranslate nohighlight">\(T_j\)</span> is k-minimal generalization of <span class="math notranslate nohighlight">\(T_i\)</span> if there is no other generalization <span class="math notranslate nohighlight">\(T_z\)</span> that has the domain tuple at a higher level in the domain generalization hierarchy (or equivalently, in the distance vector lattice). For example, consider table PT and its generalized tables illustrated in Figure <a class="reference internal" href="#gen-fig"><span class="std std-ref">Example of generalizing Race and Zip in a table following the DGH and VGH in Figure</span></a>. For <span class="math notranslate nohighlight">\(k = 2\)</span> two k-minimal generalizations exist, namely GT[1,0] and GT[0,1]. Among the other generalizations satisfying the k-anonymity
+requirement, GT[0,2] is not minimal since it is a generalization of GT[0,1]; GT[1,1] cannot be minimal since it is a
+generalization of both GT[1,0] and GT[0,1]; GT[1,2] is not minimal since it is a generalization of all of them. Also,
+there are only two k-minimal generalized tables for k=3, which are GT[1,0] and GT[0,2].</p>
+</section>
+</section>
+</section>
+<section id="suppression">
+<h2><span class="section-number">2.2. </span>Suppression<a class="headerlink" href="#suppression" title="Link to this heading">#</a></h2>
+<p>Another method to anonymize a dataset is by suppressing (i.e., removing) tuples. For example, in the private table PT shown in the following <a class="reference internal" href="#suppression-fig"><span class="std std-ref">Figure</span></a>, the <strong>bold</strong> tuples can be removed to make it 2-anonymous. Note that, only <span class="math notranslate nohighlight">\(GT_{[1,1]}\)</span> achieved 2-anonymity, by applying generalization to both columns. We can also combine generalization and suppression, e.g., <span class="math notranslate nohighlight">\(GT_{[1,0]}\)</span> is not 2-anonymous even after generalizing Race, but can be made so by removing the <strong>bold</strong> column.</p>
+<figure class="align-default" id="suppression-fig">
+<a class="reference internal image-reference" href="../../_images/supp-example1.png"><img alt="../../_images/supp-example1.png" src="../../_images/supp-example1.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Example of suppressing tuples.</span><a class="headerlink" href="#suppression-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Thus, combining generalization and suppression usually helps in satisfying k-anonymity requirements without removing as much information as would be required if only one of them was applied.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Suppression is applied on the whole tuple, unlike generalization, which is applied on one attribute at a time.</p>
+</div>
+<p>Let’s re-define some concepts we defined earlier now that we have suppression and generalization.</p>
+<p><strong>Generalized Table - with suppression:</strong> Let <span class="math notranslate nohighlight">\(T_i(A_1, \dots ,A_n)\)</span> and <span class="math notranslate nohighlight">\(T_j(A_1,\dots ,A_n)\)</span> be two tables defined on the same set of attributes. <span class="math notranslate nohighlight">\(T_j\)</span> is a generalization of <span class="math notranslate nohighlight">\(T_i\)</span> (denoted as <span class="math notranslate nohighlight">\(T_i \preceq T_j\)</span>), iff</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(T_i\)</span> have equal of more number of tuples <span class="math notranslate nohighlight">\(T_j\)</span> (i.e., <span class="math notranslate nohighlight">\(|T_i| \leq |T_j|\)</span>)</p></li>
+<li><p>The domain of each attribute <span class="math notranslate nohighlight">\(A_z\)</span> in <span class="math notranslate nohighlight">\(T_j\)</span> is equal to, or is a generalization of, the domain of <span class="math notranslate nohighlight">\(A_z\)</span> in <span class="math notranslate nohighlight">\(T_i\)</span> (i.e., <span class="math notranslate nohighlight">\(A_z \in \{A_1, \dots , A_n\} : dom(A_z, T_i) \leq_D dom(A_z, T_j)\)</span>)</p></li>
+<li><p>It is possible to define a <u>injective mapping</u> associating each tuple <span class="math notranslate nohighlight">\(t_i\)</span> in <span class="math notranslate nohighlight">\(T_i\)</span> with a tuple <span class="math notranslate nohighlight">\(t_j\)</span> in <span class="math notranslate nohighlight">\(T_j\)</span> such that the value of each attribute <span class="math notranslate nohighlight">\(A_z\)</span> in <span class="math notranslate nohighlight">\(t_j\)</span> is equal to, or is a generalization of, the value of <span class="math notranslate nohighlight">\(A_z\)</span> in <span class="math notranslate nohighlight">\(t_i\)</span>.</p></li>
+</ol>
+<p><strong>Minimal required suppression:</strong> Let <span class="math notranslate nohighlight">\(T_i\)</span> be a table and <span class="math notranslate nohighlight">\(T_j\)</span> a generalization of <span class="math notranslate nohighlight">\(T_i\)</span> satisfying
+k-anonymity. <span class="math notranslate nohighlight">\(T_j\)</span> enforces minimal required suppression iff <span class="math notranslate nohighlight">\(\forall T_z : T_i \preceq T_z , DV_{i,z} = DV_{i,j}\)</span> , <span class="math notranslate nohighlight">\(T_z\)</span> satisfies k-anonymity <span class="math notranslate nohighlight">\(\implies |T_j | \geq |Tz|\)</span>.</p>
+<p>This definition states that a table <span class="math notranslate nohighlight">\(T_j\)</span> enforces minimal required suppression w.r.t. a k-anonymity requirement if there does not exist another generalization <span class="math notranslate nohighlight">\(T_z\)</span> with the same distance vector as <span class="math notranslate nohighlight">\(T_j\)</span> that satisfies the k-anonymity requirement by suppressing less tuples.</p>
+<p>As noted earlier, Generalization and Suppression are two approaches that can be combined to achieve better results in terms of data utility. Generalization partially removes information from a column but affects all tuples. On the other hand, suppression completely removes information about a tuple, but does not affect any other tuples. One way to combine these two is speciying an <em>acceptable suppression threshold</em> <code class="docutils literal notranslate"><span class="pre">MaxSup</span></code>, i.e., the maximum number of suppressed tuples that is considered acceptable. Within this acceptable threshold, suppression is considered preferable to generalization (in other words, it is better to suppress more tuples than to enforce more generalization). Under these assumptions, we can now restate the definition of k-minimal generalization taking suppression into account:</p>
+<p><strong>Definition: k-minimal generalization - with suppression:</strong> Let <span class="math notranslate nohighlight">\(T_i\)</span> and <span class="math notranslate nohighlight">\(T_j\)</span> be two tables such that <span class="math notranslate nohighlight">\(T_i \preceq T_j\)</span>, and let <code class="docutils literal notranslate"><span class="pre">MaxSup</span></code> be the specified threshold of acceptable suppression. <span class="math notranslate nohighlight">\(T_j\)</span> is a k-minimal generalization of <span class="math notranslate nohighlight">\(T_i\)</span> iff</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(T_j\)</span> satisfies k-anonymity with minimal required suppression.</p></li>
+<li><p><span class="math notranslate nohighlight">\(|T_i| - |T_j| \leq MaxSup\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\forall T_z : T_i \preceq T_z\)</span> and <span class="math notranslate nohighlight">\(T_z\)</span> satisfies conditions 1 and 2 <span class="math notranslate nohighlight">\(\implies \neg(DV_{i,z} \le DV_{i,j}\)</span>).</p></li>
+</ol>
+<p>Intuitively, <span class="math notranslate nohighlight">\(T_j\)</span> is k-minimal if it does not enforce more suppression than it is allowed, and there does not exist another generalization satisfying these conditions with a distance vector smaller than that of <span class="math notranslate nohighlight">\(T_j\)</span>.</p>
+<p>Consider private table PT illustrated in <a class="reference internal" href="#suppression-fig"><span class="std std-ref">Figure</span></a>, the k-anonymity requirement with k=2, and the consequent generalizations providing k-anonymity illustrated in the following figure.</p>
+<figure class="align-default" id="suppression-fig2">
+<a class="reference internal image-reference" href="../../_images/supp-example2.png"><img alt="../../_images/supp-example2.png" src="../../_images/supp-example2.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Example of anonymization with suppression and generalization.</span><a class="headerlink" href="#suppression-fig2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Depending on the value of <code class="docutils literal notranslate"><span class="pre">MaxSup</span></code>, the following generalizations are considered minimal:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(MaxSup = 0 : GT_{[1,1]}\)</span> (<span class="math notranslate nohighlight">\(GT_{[0,0]}, GT_{[1,0]}, GT_{[0,1]}, GT_{[0,2]}\)</span> suppress more tuples than it is allowed, <span class="math notranslate nohighlight">\(GT_{[1,2]}\)</span> is not minimal because of <span class="math notranslate nohighlight">\(GT_{[1,1]}\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(MaxSup = 1 : GT_{[1,0]}\)</span> and <span class="math notranslate nohighlight">\(GT_{[0,2]}\)</span> (<span class="math notranslate nohighlight">\(GT_{[0,0]}\)</span> and <span class="math notranslate nohighlight">\(GT_{[0,1]}\)</span> suppress more tuples than it is allowed, <span class="math notranslate nohighlight">\(GT_{[1,1]}\)</span> is not minimal because of <span class="math notranslate nohighlight">\(GT_{[1,0]}\)</span>, and <span class="math notranslate nohighlight">\(GT_{[1,2]}\)</span> is not minimal because of <span class="math notranslate nohighlight">\(GT_{[1,0]}\)</span> and <span class="math notranslate nohighlight">\(GT_{[0,2]}\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(MaxSup = 2, 3 : GT_{[1,0]}\)</span> and <span class="math notranslate nohighlight">\(GT_{[0,1]}\)</span> (<span class="math notranslate nohighlight">\(GT_{[0,0]}\)</span> suppresses more tuples than it is allowed, <span class="math notranslate nohighlight">\(GT_{[0,2]}\)</span> is not minimal because of <span class="math notranslate nohighlight">\(GT_{[0,1]}, GT_{[1,1]}\)</span> and <span class="math notranslate nohighlight">\(GT_{[1,2]}\)</span> are not minimal because of <span class="math notranslate nohighlight">\(GT_{[1,0]}\)</span> and <span class="math notranslate nohighlight">\(GT_{[0,1]}\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(MaxSup \geq 4 : GT_{[0,0]}\)</span> (all the other generalizations are not minimal because of <span class="math notranslate nohighlight">\(GT_{[0,0]}\)</span>).</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Generalization partially removes information from a column but affects all tuples. On the other hand, suppression completely removes information about a tuple, but does not affect any other tuples. Also, we only need to suppress columns in the QI set, all other columns can be released without modifications.</p>
+</div>
+<section id="finally-achieving-a-k-minimal-generalization">
+<h3><span class="section-number">2.2.1. </span>Finally, achieving a <span class="math notranslate nohighlight">\(k\)</span>-minimal generalization<a class="headerlink" href="#finally-achieving-a-k-minimal-generalization" title="Link to this heading">#</a></h3>
+<p>Recall that we can use a tuple generalization hierarchy graph (<span class="math notranslate nohighlight">\(DGH_{DT}\)</span>) to perform generization operations to attributes belonging to a QI. Each node in the <span class="math notranslate nohighlight">\(DGH_{DT}\)</span> represents one generalization operation, and nodes in each path from bottom to top collectively represent a strategy to generalize quasi identifiers until no more generalization is possible (i.e., the maximum possible generalization has been performed).</p>
+<p>To achieve k-anonymity, we can traverse the strategies (paths) in <span class="math notranslate nohighlight">\(DGH_{DT}\)</span>, applying the generalization step specified at a node, followed by the maximum number of allowed suppressions, and stopping when we have achieved k-anonymity. In the worst case, however, we may need to search all possible paths, which can be computationally costly for large graphs. We can reduce computation by recognizing the following:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a node does not satisfy k-anonymity, no node below it (i.e., less general) will.</p>
+</div>
+<p>We can leverage this observation to cut down the nodes that we need to visit. One strategy is to use binary search on the graph based on node height. Formally, each node in the graph represents a distance vector, and the height of that node (or distance vector) is just length of the paths from the root to that node (all paths have the same length). For example, in <a class="reference internal" href="#dist-vector-fig"><span class="std std-ref">Figure</span></a>, the heights of the nodes representing distance vectors <code class="docutils literal notranslate"><span class="pre">&lt;1,1&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;1,2&gt;</span></code> are <span class="math notranslate nohighlight">\(2\)</span> and <span class="math notranslate nohighlight">\(3\)</span>, resepectively. Note that, heights can be computed by summing the elements of the distance vector (can you tell why?).</p>
+<p>This approach is formalized in the algorithm below:</p>
+<figure class="align-default" id="k-anon-algo">
+<a class="reference internal image-reference" href="../../_images/k-anon-algo.png"><img alt="../../_images/k-anon-algo.png" src="../../_images/k-anon-algo.png" style="height: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">An algorithm to finding the distance vector corresponding to a k-minimal generalization</span><a class="headerlink" href="#k-anon-algo" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The minimality of k-minimal solution only requires that the least amount of generalization and suppression necessary should be applied to achieve k-anonymity. There can be multiple such solutions.  The algorithm above returns the solution that is at the lowest height of the generalization hierarchy. But there can be other preferences or constraints. For example, certain health data release may prefer (or require) to retain information about gender for research purposes. Such data utility constraints migth require identifying a different solution than above. Following are a set of such preference policies:</p>
+<ol class="arabic simple">
+<li><p><strong>Minimum absolute distance</strong> prefers the generalization(s) that has the smallest absolute distance, that is, with the smallest total number of generalization steps (regardless of the hierarchies on which they have
+been taken).</p></li>
+<li><p><strong>Minimum relative distance</strong> prefers the generalization(s) that has the smallest relative distance, that is, that minimizes the total number of relative steps. A step is made relative by dividing it over the height of the domain hierarchy to which it refers.</p></li>
+<li><p><strong>Maximum distribution</strong> prefers the generalization(s) that contains the greatest number of distinct tuples.</p></li>
+<li><p><strong>Minimum suppression</strong> prefers the generalization(s) that suppresses less tuples, i.e., has the greatest cardinality.</p></li>
+</ol>
+</section>
+<section id="full-domain-versus-local-cell-generalization">
+<h3><span class="section-number">2.2.2. </span>Full domain versus local (cell) generalization<a class="headerlink" href="#full-domain-versus-local-cell-generalization" title="Link to this heading">#</a></h3>
+<p>The algorithm presented above to achieve k-anonymity does so by generalizing the full domain. That means, for an attribute (say Zip), all occurances of specific values (coming from domain <span class="math notranslate nohighlight">\(Z_0\)</span>) in the original table is replaced by values from another, more general domain (say <span class="math notranslate nohighlight">\(Z_2\)</span>). There are many other variants of k-anonymity. One of them is cell generalization, where each occurance of an attribute can be replaced by different general domain. Below is an example of such a table. Note that, in this generalized (4-anonymous) table, gender information has been completely removed for all rows, but some rows retained nationality. For zip, the specific values were replaced by values from different domain (some from <span class="math notranslate nohighlight">\(Z_1\)</span>, some from <span class="math notranslate nohighlight">\(Z_3\)</span>). Thus, this is not a full-domain generalization, rather individual cells were locally generalized using multiple domain. Usually such generalizations retain more utility.</p>
+<p><img alt="figure" src="../../_images/local-generalization.png" /></p>
+<hr class="docutils" />
+<p><strong>Other resources</strong></p>
+<hr class="docutils" />
+<p><strong>References</strong></p>
+<span class="target" id="id3"></span></section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters/anonymizations"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Anonymization techniques</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="utility.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Data utility</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linking-attack">2.1. Linking attack</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">2.1.1. Definitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achieving-k-anonymity">2.1.2. Achieving k-anonymity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#domain-generalization">2.1.3. Domain generalization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#domain-tuple-generalization">2.1.4. Domain tuple generalization</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-domain-generalization-to-achieve-k-anonymity">2.1.4.1. How to use domain generalization to achieve k-anonymity?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#suppression">2.2. Suppression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finally-achieving-a-k-minimal-generalization">2.2.1. Finally, achieving a <span class="math notranslate nohighlight">\(k\)</span>-minimal generalization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-domain-versus-local-cell-generalization">2.2.2. Full domain versus local (cell) generalization</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rakibul Hasan
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
