@@ -7,6 +7,7 @@ description: Course resources
 There is no specific book for this course. The course content will come from multiple books and research papers. Some topics are compiled in this (under construction) {ref}`Tutorial<tutorial/_build/html/intro.html>`. Below is a list of books and other resources that cover the content of this tutorial at a much greater depth (and breadth).
 
 Another: <a href="https://persue-lab-asu.github.io/cse467/tutorial/_build/html/intro.html">tutorial</a>
+Another: <a href="https://persue-lab-asu.github.io/tutorial-html/intro.html">tutorial</a>
 
 # Books
 - [The Algorithmic Foundations of Differential Privacy](https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf)
