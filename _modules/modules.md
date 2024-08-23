@@ -17,10 +17,10 @@ Sep 09
 :	Probability refresher
 
 Sep 11
-: Privacy threat modeling using LINDDUN 
+: Privacy threat modeling using LINDDUN **Project proposal due**{: .label .label-orange }
 
 Sep 16
-:	k-anonymity **Project proposal due**{: .label .label-orange }
+:	k-anonymity 
 
 Sep 18
 :	k-anonymity (cont.) 
