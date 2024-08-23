@@ -4,7 +4,7 @@ title: Resources
 description: Course resources
 ---
 
-[Tutorial](tutorial/_build/html/intro.html)
+There is no specific book for this course. The course content will come from multiple books and research papers. Some topics are compiled in this (under construction) [Tutorial](./tutorial/_build/html/intro.html). Below is a list of books and other resources used to create this tutorial.
 
 # Books
 - [The Algorithmic Foundations of Differential Privacy](https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf)
