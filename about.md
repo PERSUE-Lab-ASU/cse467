@@ -28,6 +28,8 @@ Start early and plan your time well. To account for unavoidable issues, students
 ## Grading policy
 
 ### Grading components
+**Class attendance: 5%**
+
 **In-class quizzes: 25%**
 
 Short Quizzes will be administered at the beginning of every lecture (excluding Lecture 1). They will be short, and mainly aimed at making sure that you were able to follow the material covered on the previous day. The worst-performing 1 Quiz across all lectures will be discarded.
