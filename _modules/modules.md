@@ -40,7 +40,7 @@ Oct 01
 :	Differential privacy
 
 Oct 06
-:	Differential privacy (cont.)
+:	Differential privacy (cont.) **HW1 grades released**{: .label .label-blue}
 
 Oct 08
 :	Differential privacy (cont.)
@@ -66,7 +66,7 @@ Oct 29
 :	Attacks on ML models (cont.)
 
 Nov 03
-:	Private ML with differential privacy
+:	Private ML with differential privacy **HW2 grades released**{: .label .label-blue}
 
 Nov 05
 :	Private ML with differential privacy (cont.)
@@ -96,7 +96,7 @@ Dec 01
 :	Privacy and Fairness (cont.)
 
 Dec 03
-:	Privacy and Fairness (cont.)
+:	Privacy and Fairness (cont.) **HW3 grades released**{: .label .label-blue}
 
 Dec 07
 :	**Project final report due**{: .label .label-orange }
