@@ -1,105 +1,105 @@
 ---
 title: Course Schedule
 ---
-Aug 26
+Aug 25
 :	Introduction and overview of the course
 
-Aug 28
+Aug 27
 :	Taxonomy of privacy harms + Project discussion: [Optional reading](https://scholarship.law.upenn.edu/penn_law_review/vol154/iss3/1/)
 
-Sep 02
+Sep 01
 :	**No class (Labor day)**{: .label .label-purple }
 
-Sep 04
+Sep 03
 :	Introduction to Python programming
 
-Sep 09
+Sep 08
 :	Probability refresher
 
-Sep 11
+Sep 10
 : Privacy threat modeling using LINDDUN **Project proposal due**{: .label .label-orange }
 
-Sep 16
+Sep 15
 :	k-anonymity 
 
-Sep 18
+Sep 17
 :	k-anonymity (cont.) 
 : **HW 1 released**{: .label .label-green }
 
-Sep 23
+Sep 22
 :	Data utility & l-diversity
 
-Sep 25
+Sep 24
 :	l-diversity (cont.) & t-closeness
 
-Sep 30
+Sep 29
 :	Data leak from queries & Introduction to  Differential privacy  
 : **HW 1 due**{: .label .label-red }
 
-Oct 02
+Oct 01
 :	Differential privacy (cont.)
 
-Oct 07
+Oct 06
 :	Differential privacy (cont.)
 
-Oct 09
+Oct 08
 :	Differential privacy (cont.)
 
-Oct 14
+Oct 13
 :	**No class (Fall break)**{: .label .label-purple }
 
-Oct 16
+Oct 15
 :	TBD
 : **HW 2 released**{: .label .label-green }
 
-Oct 21
+Oct 20
 :	Predictive modeling basics **Project intermediate report due**{: .label .label-orange }
 
-Oct 23
+Oct 22
 :	Regression models, Neural Networks, and Gradient descent
 
-Oct 28
+Oct 27
 :	Attacks on ML models 
 : **HW 2 due**{: .label .label-red }
 
-Oct 30
+Oct 29
 :	Attacks on ML models (cont.)
 
-Nov 04
+Nov 03
 :	Private ML with differential privacy
 
-Nov 06
+Nov 05
 :	Private ML with differential privacy (cont.)
 
-Nov 11
-:	**No class (Veterans Day)**{: .label .label-purple }
+Nov 10
+:	
 
-Nov 13
+Nov 12
 :	Causality basics 
 : **HW 3 released**{: .label .label-green }
 
-Nov 18
+Nov 17
 :	Causality for privacy
 
-Nov 20
+Nov 19
 :	Causality for privacy (cont.)
 
-Nov 25
+Nov 24
 :	Causality for privacy (cont.) 
 : **HW 3 due**{: .label .label-red }
 
-Nov 27
+Nov 26
 :	Privacy and Fairness 
 : **HW 4 released**{: .label .label-green }
 
-Dec 02
+Dec 01
 :	Privacy and Fairness (cont.)
 
-Dec 04
+Dec 03
 :	Privacy and Fairness (cont.)
 
-Dec 08
+Dec 07
 :	**Project final report due**{: .label .label-orange }
 
-Dec 11
+Dec 10
 :	**HW 4 due**{: .label .label-red }
