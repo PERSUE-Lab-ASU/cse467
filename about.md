@@ -48,27 +48,49 @@ You will submit a report describing your research, results, and conclusions.  Th
 3. The scientific validity of the research methodology.
 4. Quality of the writing, your ability to motivate your research, clarity in presenting the methods, drawing conclusions from your results, synthesizing knowledge, and contextualizing findings from prior research, as well as its conciseness.
 
+### Grading threshold 
+
+|   |   |   |   |   |   |   |   |    |
+|---|---|---|---|---|---|---|---|----|
+|Grade| A+ | A | A- | B+ | B | B- | C+ | C|
+| Threshold | 97 | 93| 90| 86 | 83 | 80 | 74 | 70 |
+
+**NOTE: We reserve the right to curve the grades depending on the circumstances**.
+
 ## Project milestones
 
 You will complete the project in multiple milestones, and each milestone will be graded *independently* of the other parts.
 ### Proposal (10)
 Due by the end of Week 3, submit a short (2-page max) research proposal. At a minimum, it must contain the following sections:
-    1. Name of the project team and names of students on the team
-    2. Introduction: Problem statement and motivation, Research questions and/or hypotheses, and expected contribution
-    3. Literature review: Review at least five papers on the topic of this research. From the review, it should be clear that the problem is important and not (fully) solved.
-    4. Brief research method: Prototyping/implementing and evaluating software artifacts, comparing existing apps, Data Analysis, Surveys or Interviews, and so on. If implementation-focused, explain what technology/resources you will use, and how you will evaluate the implemented system.
-        a. Describe the types of quantitative and/or qualitative data you expect to collect, if you plan to conduct user studies, how will you develop the questionnaire?
-        b. Data analysis: What quantitative and/or qualitative approaches do you expect to use to analyze your data?
-    5. Collaboration plan: How often will the team meet? How will you communicate? How do you expect to divide up the work?
+- Project title, names of the team members
+- Introduction: Problem statement and motivation, Research questions and/or hypotheses, and expected contribution.
+- Literature review: Review at least five papers on the topic of this research. Briefly explain what these papers have done, and what gap exists
+  that your research will fill.
+- Brief research method: How will you conduct your research? Will you prototype/implement a system/software? If so, explain what technology/resources you will use, and how you will evaluate the implemented system. Will you collect any quantitative or qualitative data? How will you collect and analyze that data? Will there be human-subject studies? What will be the study protocol? How will you recruit participants?
+- Collaboration plan: How often will the team meet? How will you communicate? How do you expect to divide up the work?
+
+**Evaluation criteria**: research novelty, motivation, importance, and potential impact.
+
 ### Intermediate project report (10)
 Provide a progress report (max 4 pages) with intermediate results by the end of Week 8. <ins>By that time, you must be able to complete at least 30% of what you had proposed to do</ins>. Report components:
-    1. Introduction: problem motivation, research questions/hypotheses, briefly discuss methods and findings.
+- Introduction: same content as before, but expanded (at least one page).
+- Literature review: expand as needed.
+- Methodology: detailed research methods including data collection (what specifically will you collect) and analysis approach (how will you analyze them to answer the RQs or test your hypotheses).
+- Findings: partial results if available.
+- Next steps: Explain unresolved issues and challenges, and how you will resolve them. Provide a timeline to complete the remaining tasks and write the project report. How will you distribute the workload among the team members?
 
-Explain unresolved issues and challenges, and how you will resolve them? Provide a timeline to complete the remaining tasks and write the project report. How will you distribute the workload among the team members?
+**Evaluation criteria**:  30% complete? Methodological rigor.
 
 ### Final report (20) 
 Extend the status report with all results, discuss, interpret, and contextualize the results, and draw conclusions from them.  
-Minimum components
+Minimum components:
+- Introduction: expand and revise as needed
+- Literature review: expand and revise as needed
+- Methodology: complete methodological details
+- Findings: all results
+- Discussion and conclusions: interpret and contextualize the results in light of prior research. 
+
+**Evaluation criteria**: Findings, discussion and conclusions, report presentation.
 
 **Tips about the final project**
 
@@ -83,15 +105,6 @@ Minimum components
     * https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005484
 
 
-
-### Grading threshold 
-
-|   |   |   |   |   |   |   |   |    |
-|---|---|---|---|---|---|---|---|----|
-|Grade| A+ | A | A- | B+ | B | B- | C+ | C|
-| Threshold | 97 | 93| 90| 86 | 83 | 80 | 74 | 70 |
-
-**NOTE: We reserve the right to curve the grades depending on the circumstances**.
 
 ### Bonus points
 
