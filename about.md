@@ -48,19 +48,27 @@ You will submit a report describing your research, results, and conclusions.  Th
 3. The scientific validity of the research methodology.
 4. Quality of the writing, your ability to motivate your research, clarity in presenting the methods, drawing conclusions from your results, synthesizing knowledge, and contextualizing findings from prior research, as well as its conciseness.
 
-**Project milestones**
+## Project milestones
 
 You will complete the project in multiple milestones, and each milestone will be graded *independently* of the other parts.
-1. Proposal (10): By the end of Week 3, submit a short (2-page max) research proposal. At a minimum, it must contain:
+### Proposal (10)
+Due by the end of Week 3, submit a short (2-page max) research proposal. At a minimum, it must contain the following sections:
     1. Name of the project team and names of students on the team
-    2. Problem statement, Research questions and hypotheses (if applicable), and expected contribution
-    3. Research approach: Prototyping/implementing and evaluating software artifacts, comparing existing apps, Data Analysis, Surveys or Interviews, and so on.
-    4. If implementation-focused, explain what technology/resources you will use, and how you will evaluate the implemented system.
-    5. Data collection: Describe the type of quantitative and/or qualitative data you expect to collect, if you plan to conduct user studies, how will you develop the questionnaire?
-    6. Data analysis: What quantitative and/or qualitative approaches do you expect to use to analyze your data
-    7. Collaboration plan: How often will the team meet? How will you communicate? How do you expect to divide up the work?
-3. Intermediate project report (10):  Provide a progress report (max 3 pages) with intermediate results by the end of Week 8. <ins>By that time, you must be able to complete at least 30% of what you had proposed to do</ins>. Explain unresolved issues and challenges, and how you will resolve them? Provide a timeline to complete the remaining tasks and write the project report. How will you distribute the workload among the team members?
-4. Final report (20): Extend the status report with all results, discuss, interpret, and contextualize the results, and draw conclusions from them.  
+    2. Introduction: Problem statement and motivation, Research questions and/or hypotheses, and expected contribution
+    3. Literature review: Review at least five papers on the topic of this research. From the review, it should be clear that the problem is important and not (fully) solved.
+    4. Brief research method: Prototyping/implementing and evaluating software artifacts, comparing existing apps, Data Analysis, Surveys or Interviews, and so on. If implementation-focused, explain what technology/resources you will use, and how you will evaluate the implemented system.
+        a. Describe the types of quantitative and/or qualitative data you expect to collect, if you plan to conduct user studies, how will you develop the questionnaire?
+        b. Data analysis: What quantitative and/or qualitative approaches do you expect to use to analyze your data?
+    5. Collaboration plan: How often will the team meet? How will you communicate? How do you expect to divide up the work?
+### Intermediate project report (10)
+Provide a progress report (max 4 pages) with intermediate results by the end of Week 8. <ins>By that time, you must be able to complete at least 30% of what you had proposed to do</ins>. Report components:
+    1. Introduction: problem motivation, research questions/hypotheses, briefly discuss methods and findings.
+
+Explain unresolved issues and challenges, and how you will resolve them? Provide a timeline to complete the remaining tasks and write the project report. How will you distribute the workload among the team members?
+
+### Final report (20) 
+Extend the status report with all results, discuss, interpret, and contextualize the results, and draw conclusions from them.  
+Minimum components
 
 **Tips about the final project**
 
