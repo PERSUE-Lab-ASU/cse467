@@ -60,7 +60,7 @@ You will submit a report describing your research, results, and conclusions.  Th
 ## Project milestones
 
 You will complete the project in multiple milestones, and each milestone will be graded *independently* of the other parts.
-### Proposal (10)
+### Proposal (10 pts)
 Due by the end of Week 3, submit a short (2-page max) research proposal. At a minimum, it must contain the following sections:
 - Project title, names of the team members
 - Introduction: Problem statement and motivation, Research questions and/or hypotheses, and expected contribution.
@@ -71,7 +71,7 @@ Due by the end of Week 3, submit a short (2-page max) research proposal. At a mi
 
 **Evaluation criteria**: research novelty, motivation, importance, and potential impact.
 
-### Intermediate project report (10)
+### Intermediate project report (10 pts)
 Provide a progress report (max 4 pages) with intermediate results by the end of Week 8. <ins>By that time, you must be able to complete at least 30% of what you had proposed to do</ins>. Report components:
 - Introduction: same content as before, but expanded (at least one page).
 - Literature review: expand as needed.
@@ -81,8 +81,8 @@ Provide a progress report (max 4 pages) with intermediate results by the end of 
 
 **Evaluation criteria**:  30% complete? Methodological rigor.
 
-### Final report (20) 
-Extend the status report with all results, discuss, interpret, and contextualize the results, and draw conclusions from them.  
+### Final report (20 pts) 
+Extend the status report with all results, discuss, interpret, contextualize the results and draw conclusions from them.  
 Minimum components:
 - Introduction: expand and revise as needed
 - Literature review: expand and revise as needed
@@ -90,15 +90,17 @@ Minimum components:
 - Findings: all results
 - Discussion and conclusions: interpret and contextualize the results in light of prior research. 
 
-**Evaluation criteria**: Findings, discussion and conclusions, report presentation.
+**Evaluation criteria**: Findings, discussion, conclusions, and writing and presentation quality of the report.
+
+*Note*: references do not count toward the page limit.
 
 **Tips about the final project**
 
 1. You should start thinking about the final project very soon and form a team with those who have similar interests.
 2. We will discuss some project ideas in the class as examples of interesting topics.
 3. You may find ideas for possible project topics by “glancing ahead” at the course’s topics for future weeks. If some topic seems interesting but you are not very familiar with it, talk to the instructor or the TAs.
-4. You may also find ideas by checking websites such as [Markup](https://themarkup.org/series/privacy), [EPIC](http://www.epic.org/), [IAPP Privacy consortium](http://www.privacyassociation.org/), [Common Sense Media]https://www.commonsense.org/), and Future of [Privacy Forum](fpf.org).
-5. Other resources 
+4. You may also find ideas by checking websites such as [Markup](https://themarkup.org/series/privacy), [EPIC](http://www.epic.org/), [IAPP Privacy consortium](http://www.privacyassociation.org/), [Common Sense Media](https://www.commonsense.org/), [404 Media](https://www.404media.co/), and [Future of Privacy Forum](fpf.org).
+5. Other useful resources to learn how to do research
     * https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/bes2.1745
     * https://nishanthjkumar.com/A-Beginner's-Guide-to-Undergrad-CS-Research/
     * https://www.bu.edu/synapse/2009/04/27/tips-n-tricks-part-i/
@@ -111,8 +113,8 @@ Minimum components:
 Students can earn bonus points throughout the semester in various ways (max 10 points per student):
 - **Assignment submission:** 1 bonus point for submitting assignments at least one hour before the deadline. 
 - **Ask questions:** 1 bonus point for asking a thought-provoking question during the lecture. 
-- **Answer questions:** A discord channel will be created to ask and answer questions. You will get 1 bonus point if at least 3 people find your answer to a question useful (please upvote or like the answer if you found it useful). Questions must be non-trivial to answer.
-- **Publishing research:** You can get up to 5 bonus points for your project if you create a 5-8 min video presentation explaining your research and make it public, and publish the codebase (if any) in an <ins>extremely easy-to-use format with comprehensive documentation</ins>. The blog post/video presentation must be prepared in a way that is understandable by anyone curious about scientific research. **Note:** if your project involves human subjects data collection, you must obtain IRB approval *before* conducting the research to make sure that your research method is ethical. Talk to me or the TA if you need assistance with this process. You can also aim to publish your research at a conference/journal/workshop. If applicable, you can continue working on the project toward a publication after the semester ends, and we can explore possible ways to get funding to do this.
+- **Answer questions:** A Discord channel will be created to ask and answer questions. You will get 1 bonus point if at least 3 people find your answer to a question useful (please upvote or like the answer if you found it useful). Questions must be non-trivial to answer.
+- **Publishing research:** You can get up to 5 bonus points for your project if you create a 5-8 min video presentation explaining your research and make it public, and publish the codebase (if any) in an <ins>extremely easy-to-use format with comprehensive documentation</ins>. The blog post/video presentation must be prepared in a way that is understandable by anyone curious about scientific research. **Note:** if your project involves human subjects data collection, you must obtain IRB approval *before* collecting data to make sure that your research method is ethical. Talk to the instructor or the TA if you need assistance with this process. You can also aim to publish your research at a conference/journal/workshop. If applicable, you can continue working on the project toward a publication after the semester ends, and we can explore possible ways to get funding to do this.
 
 **NOTE: The instructor and TAs reserve exclusive rights to determine if a question/answer/post deserves the bonus point.**
 
