@@ -11,33 +11,33 @@ Sep 01
 :	**No class (Labor day)**{: .label .label-purple }
 
 Sep 03
-:	Introduction to Python programming
+:	Privacy threat modeling
 
 Sep 08
 :	Probability refresher
 
 Sep 10
-: Privacy threat modeling **Project proposal due**{: .label .label-orange }
+: Introduction to Python programming **Project proposal due**{: .label .label-orange }
 
 Sep 15
-:	k-anonymity 
+:	Python programming (cont.)
 
 Sep 17
-:	k-anonymity (cont.) 
+:	k-anonymity
 : **HW 1 released**{: .label .label-green }
 
 Sep 22
-:	Data utility & l-diversity
+:	k-anonymity (cont.) **Revised project proposal due**{: .label .label-orange }
 
 Sep 24
-:	l-diversity (cont.) & t-closeness
+:	Data utility & l-diversity
 
 Sep 29
-:	Data leak from queries & Introduction to  Differential privacy  
+:	l-diversity (cont.) & t-closeness
 : **HW 1 due**{: .label .label-red }
 
 Oct 01
-:	Differential privacy (cont.)
+:	Differential privacy
 
 Oct 06
 :	Differential privacy (cont.)
@@ -49,7 +49,7 @@ Oct 13
 :	**No class (Fall break)**{: .label .label-purple }
 
 Oct 15
-:	TBD
+:	Differential privacy (cont.)
 : **HW 2 released**{: .label .label-green }
 
 Oct 20
