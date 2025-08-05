@@ -27,7 +27,7 @@ Sep 17
 : **HW 1 released**{: .label .label-green }
 
 Sep 22
-:	k-anonymity (cont.) **Revised project proposal due**{: .label .label-orange }
+:	k-anonymity (cont.) **Revised project proposal due**{: .label .label-red }
 
 Sep 24
 :	Data utility & l-diversity
@@ -99,7 +99,7 @@ Dec 03
 :	Privacy and Fairness (cont.) **HW3 grades released**{: .label .label-blue}
 
 Dec 07
-:	**Project final report due**{: .label .label-orange }
+:	**Project final report due**{: .label .label-red }
 
 Dec 10
 :	**HW 4 due**{: .label .label-red }
