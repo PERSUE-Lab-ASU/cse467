@@ -22,7 +22,7 @@ Regular class attendance and participation are required unless pre-approved by t
 **Important.** Excused absences for classes will be given without penalty to the grade in the case of (1) a university-sanctioned event [ACD 304-02]; (2) religious holidays [ACD 304-04]; a list can be found here https://eoss.asu.edu/cora/holidays ]; (3) work performed in the line-of-duty according [SSM 201-18]; Excused absences do not relieve students from responsibility for any part of the course work required during the period of absence.
 
 ## Late submission policy for assignments
-Start early and plan your time well. To account for unavoidable issues, students will get a 2-day extension for one of the assignments without asking me (except for the last homework). This should be reserved for an emergency, there will be no further extension unless prior approval.
+Start early and plan your time well. To account for unavoidable issues, students will get a 2-day extension for one of the assignments without asking me (except for the last homework). This should be reserved for an emergency; there will be no further extension without prior approval.
 
 
 ## Grading policy
@@ -32,41 +32,41 @@ Start early and plan your time well. To account for unavoidable issues, students
 
 **In-class quizzes: 25%**
 
-Short Quizzes will be administered at the beginning of every lecture (excluding Lecture 1). They will be short, and mainly aimed at making sure that you were able to follow the material covered on the previous day. The worst-performing 1 Quiz across all lectures will be discarded.
+Short Quizzes will be administered at the beginning of every lecture (excluding Lecture 1). They will be brief and primarily aimed at ensuring that you were able to follow the material covered on the previous day. The worst-performing 1 Quiz across all lectures will be discarded.
 
-**Assignments 40%**
+**Assignments 30%**
 
-There will be 4 homework assignments that will involve various tasks: programming, mathematical problem solving, designing system prototypes following privacy and security principles, explaining concepts taught in the course, and so on. Written assignments will be graded based on the clarity and validity of your arguments and analysis. You can submit one assignment up to 48 hours late without any penalty. Beyond that, 10% points will be subtracted for every 24-hour delay. Three best-scoring assignments will be counted toward your grade.
+There will be 4 homework assignments that will involve various tasks: programming, mathematical problem solving, designing system prototypes following privacy and security principles, explaining concepts taught in the course, and so on. Written assignments will be graded based on the clarity and validity of your arguments and analysis. You can submit one assignment up to 48 hours late without any penalty. Beyond that, 10% points will be subtracted for every 24-hour delay. The three best-scoring assignments will be counted toward your grade.
 
-**Research project 30%**
+**Research project 40%**
 
-Teams of 2–4 students will work on a novel, potentially impactful, and interesting research project <ins>related to data privacy</ins>. The project should involve any combination of the activities: implementing prototypes, conducting experiments, collecting and analyzing data, and writing a report. **The goal of this research-oriented project is to generate new scientific knowledge (not just building tools)**.
+Teams of 5-6 students will work on a novel, potentially impactful, and interesting research project <ins>related to data privacy</ins>. The project should involve any combination of the activities: implementing prototypes, conducting experiments, collecting and analyzing data, and writing a report. **The goal of this research-oriented project is to generate new scientific knowledge (not just building tools)**.
 
 You will submit a report describing your research, results, and conclusions.  The project will be graded based on 
 1. Importance of the problem studied/potential impact of the solution
 2. Novelty of the problem or solution, or both.
 3. The scientific validity of the research methodology.
-4. Quality of the writing, your ability to motivate your research, clarity in presenting the methods, drawing conclusions from your results, synthesizing knowledge and contextualizing findings from prior research, as well as its conciseness.
+4. Quality of the writing, your ability to motivate your research, clarity in presenting the methods, drawing conclusions from your results, synthesizing knowledge, and contextualizing findings from prior research, as well as its conciseness.
 
 **Project milestones**
 
 You will complete the project in multiple milestones, and each milestone will be graded *independently* of the other parts.
-1. Proposal (5): By the end of Week 3, submit a short (2-page max) research proposal. At a minimum, it must contain:
+1. Proposal (10): By the end of Week 3, submit a short (2-page max) research proposal. At a minimum, it must contain:
     1. Name of the project team and names of students on the team
     2. Problem statement, Research questions and hypotheses (if applicable), and expected contribution
     3. Research approach: Prototyping/implementing and evaluating software artifacts, comparing existing apps, Data Analysis, Surveys or Interviews, and so on.
     4. If implementation-focused, explain what technology/resources you will use, and how you will evaluate the implemented system.
-    5. Data collection: describe the type of quantitative and/or qualitative data you expect to collect, if you plan to conduct user studies, how will you develop the questionnaire?
-    6. Data analysis: what quantitative and/or qualitative approaches do you expect to use to analyze your data
+    5. Data collection: Describe the type of quantitative and/or qualitative data you expect to collect, if you plan to conduct user studies, how will you develop the questionnaire?
+    6. Data analysis: What quantitative and/or qualitative approaches do you expect to use to analyze your data
     7. Collaboration plan: How often will the team meet? How will you communicate? How do you expect to divide up the work?
-3. Intermediate project report (10):  Provide a progress report (max 3 pages) with intermediate results by the end of Week 8. <ins>By that time, you must be able to complete at least 30% of what you had proposed to do</ins>. Explain unresolved issues and challenges, how will you resolve them? Provide a timeline to complete the remaining tasks and write the project report. How will you distribute the workload among the team members?
-4. Final report (15): Extend the status report with all results, discuss, interpret, and contextualize the results, and draw conclusions from them.  
+3. Intermediate project report (10):  Provide a progress report (max 3 pages) with intermediate results by the end of Week 8. <ins>By that time, you must be able to complete at least 30% of what you had proposed to do</ins>. Explain unresolved issues and challenges, and how you will resolve them? Provide a timeline to complete the remaining tasks and write the project report. How will you distribute the workload among the team members?
+4. Final report (20): Extend the status report with all results, discuss, interpret, and contextualize the results, and draw conclusions from them.  
 
 **Tips about the final project**
 
 1. You should start thinking about the final project very soon and form a team with those who have similar interests.
 2. We will discuss some project ideas in the class as examples of interesting topics.
-3. You may find ideas for possible project topics by “glancing ahead” at the course’s topics for future weeks. If some topic seems interesting but you are not very familiar with it, talk with me or the TAs.
+3. You may find ideas for possible project topics by “glancing ahead” at the course’s topics for future weeks. If some topic seems interesting but you are not very familiar with it, talk to the instructor or the TAs.
 4. You may also find ideas by checking websites such as [Markup](https://themarkup.org/series/privacy), [EPIC](http://www.epic.org/), [IAPP Privacy consortium](http://www.privacyassociation.org/), [Common Sense Media]https://www.commonsense.org/), and Future of [Privacy Forum](fpf.org).
 5. Other resources 
     * https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/bes2.1745
@@ -87,11 +87,11 @@ You will complete the project in multiple milestones, and each milestone will be
 
 ### Bonus points
 
-Students can earn bonus points throughout the semester in various ways:
+Students can earn bonus points throughout the semester in various ways (max 10 points per student):
 - **Assignment submission:** 1 bonus point for submitting assignments at least one hour before the deadline. 
 - **Ask questions:** 1 bonus point for asking a thought-provoking question during the lecture. 
 - **Answer questions:** A discord channel will be created to ask and answer questions. You will get 1 bonus point if at least 3 people find your answer to a question useful (please upvote or like the answer if you found it useful). Questions must be non-trivial to answer.
-- **Publishing research:** You can get 5% bonus points for your project if you create a blog post video presentation explaining your research and make it public, and publish the codebase (if any) in an <ins>extremely easy-to-use format with comprehensive documentation</ins>. The blog post/video presentation must be prepared in a way that is understandable by anyone curious about scientific research. **Note:** if your project involves human subjects data collection, you must obtain IRB approval *before* conducting the research to make sure that your research method is ethical. Talk to me or the TA if you need assistance with this process. You can also aim to publish your research at a conference/journal/workshop. If applicable, you can continue working on the project toward a publication after the semester ends, and we can explore possible ways to get funding to do this.
+- **Publishing research:** You can get up to 5 bonus points for your project if you create a 5-8 min video presentation explaining your research and make it public, and publish the codebase (if any) in an <ins>extremely easy-to-use format with comprehensive documentation</ins>. The blog post/video presentation must be prepared in a way that is understandable by anyone curious about scientific research. **Note:** if your project involves human subjects data collection, you must obtain IRB approval *before* conducting the research to make sure that your research method is ethical. Talk to me or the TA if you need assistance with this process. You can also aim to publish your research at a conference/journal/workshop. If applicable, you can continue working on the project toward a publication after the semester ends, and we can explore possible ways to get funding to do this.
 
 **NOTE: The instructor and TAs reserve exclusive rights to determine if a question/answer/post deserves the bonus point.**
 
@@ -159,6 +159,6 @@ online students may access 360 Life Services, https://goto.asuonline.asu.edu/suc
 
 ## Photo requirements
 Arizona State University requires each enrolled student and university employee to have on file with ASU a
-current photo that meets ASU&#39;s requirements (your "Photo"). ASU uses your Photo to identify you, as necessary, to provide you educational and related services as an enrolled student at ASU. If you do not have an acceptable
+current photo that meets ASU&#39;s requirements (your "Photo"). ASU uses your Photo to identify you, as necessary, to provide you with educational and related services as an enrolled student at ASU. If you do not have an acceptable
 Photo on file with ASU, or if you do not consent to the use of your photo, access to ASU resources, including
-access to course material or grades (online or in person) may be negatively affected, withheld or denied.
+access to course material or grades (online or in person) may be negatively affected, withheld, or denied.
