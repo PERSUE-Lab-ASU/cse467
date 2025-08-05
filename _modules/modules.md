@@ -5,7 +5,7 @@ Aug 25
 :	Introduction and overview of the course
 
 Aug 27
-:	Taxonomy of privacy harms + Project discussion: [Optional reading](https://scholarship.law.upenn.edu/penn_law_review/vol154/iss3/1/)
+:	Taxonomy of privacy harms + Project discussion
 
 Sep 01
 :	**No class (Labor day)**{: .label .label-purple }
@@ -17,7 +17,7 @@ Sep 08
 :	Probability refresher
 
 Sep 10
-: Privacy threat modeling using LINDDUN **Project proposal due**{: .label .label-orange }
+: Privacy threat modeling **Project proposal due**{: .label .label-orange }
 
 Sep 15
 :	k-anonymity 
@@ -72,7 +72,7 @@ Nov 05
 :	Private ML with differential privacy (cont.)
 
 Nov 10
-:	
+:	Differentially private Synthetic data generation
 
 Nov 12
 :	Causality basics 
