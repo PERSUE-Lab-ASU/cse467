@@ -30,15 +30,15 @@ Start early and plan your time well. To account for unavoidable issues, students
 ### Grading components
 **Class attendance: 5%**
 
-**In-class quizzes: 25%**
+**In-class quizzes: 20%**
 
-Short Quizzes will be administered at the beginning of every lecture (excluding Lecture 1). They will be brief and primarily aimed at ensuring that you were able to follow the material covered on the previous day. The worst-performing 1 Quiz across all lectures will be discarded.
+Short Quizzes will be administered at the beginning of every lecture (excluding Lecture 1). They will be brief and primarily aimed at making sure that you were able to follow the material covered on the previous day. The best-performing 20 quizzes across all lectures will be counted toward the final grade (each worth 1 point).
 
-**Assignments 30%**
+**Assignments 45%**
 
-There will be 4 homework assignments that will involve various tasks: programming, mathematical problem solving, designing system prototypes following privacy and security principles, explaining concepts taught in the course, and so on. Written assignments will be graded based on the clarity and validity of your arguments and analysis. You can submit one assignment up to 48 hours late without any penalty. Beyond that, 10% points will be subtracted for every 24-hour delay. The three best-scoring assignments will be counted toward your grade.
+There will be 4 homework assignments that will involve various tasks: programming, mathematical problem solving, designing system prototypes following privacy and security principles, explaining concepts taught in the course, and so on. Written assignments will be graded based on the clarity and validity of your arguments and analysis. You can submit one assignment up to 48 hours late without any penalty. Beyond that, 10% points will be subtracted for every 24-hour delay. The three best-scoring assignments will be counted toward your grade (each 15 points).
 
-**Research project 40%**
+**Research project 30%**
 
 Teams of 5-6 students will work on a novel, potentially impactful, and interesting research project <ins>related to data privacy</ins>. The project should involve any combination of the activities: implementing prototypes, conducting experiments, collecting and analyzing data, and writing a report. **The goal of this research-oriented project is to generate new scientific knowledge (not just building tools)**.
 
