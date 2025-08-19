@@ -128,8 +128,8 @@ All student academic integrity violations are reported to the Fulton Schools of 
 
 You may engage in intellectual discussions about reading assignments with your peers or me, but all submissions must be your own, based on your understanding of the content. Your project report will resemble academic scholarly articles, where you must credit all sources, including your partners in brainstorming, published papers, and existing code repositories (e.g., from Stackoverflow or GitHub) that you have used in your implementation. Posting your projects online before the semester ends, including using a public Github repo, is expressly forbidden. The GitHub Student Developer Pack provides unlimited private repositories while you are a student.
 
-## Generative AI
-Generative AI is a technology that can often be useful in helping students learn the theories and concepts in this course. However, unless explicitly allowed by your instructor, the use of generative AI tools to complete any portion of a course assignment or exam will be considered academic dishonesty and a violation of the ASU [Academic Integrity Policy](https://provost.asu.edu/academic-integrity/policy). Students confirmed to be engaging in non-allowable use of generative AI will be sanctioned according to the academic integrity policy and FSE sanctioning guidelines.
+## Use of algorithmic tools (including so-called AI and Generative AI)
+The policy is **Do NOT Trust, and Verify**. We will discuss in class what that means.
 
 ## Expected behaviors and Title IX
 Students in this class are expected to acknowledge and embrace the FSE student professionalism expectation
