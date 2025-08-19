@@ -60,7 +60,7 @@ You will submit a report describing your research, results, and conclusions.  Th
 ## Project milestones
 
 You will complete the project in multiple milestones, and each milestone will be graded *independently* of the other parts.
-### Proposal (10 pts)
+### Proposal (5 pts)
 Due by the end of Week 3, submit a short (2-page max) research proposal. At a minimum, it must contain the following sections:
 - Project title, names of the team members
 - Introduction: Problem statement and motivation, Research questions and/or hypotheses, and expected contribution.
@@ -81,7 +81,7 @@ Provide a progress report (max 4 pages) with intermediate results by the end of 
 
 **Evaluation criteria**:  30% complete? Methodological rigor.
 
-### Final report (20 pts) 
+### Final report (15 pts) 
 Extend the status report with all results, discuss, interpret, contextualize the results and draw conclusions from them.  
 Minimum components:
 - Introduction: expand and revise as needed
