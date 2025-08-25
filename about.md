@@ -129,7 +129,7 @@ All student academic integrity violations are reported to the Fulton Schools of 
 You may engage in intellectual discussions about reading assignments with your peers or me, but all submissions must be your own, based on your understanding of the content. Your project report will resemble academic scholarly articles, where you must credit all sources, including your partners in brainstorming, published papers, and existing code repositories (e.g., from Stackoverflow or GitHub) that you have used in your implementation. Posting your projects online before the semester ends, including using a public Github repo, is expressly forbidden. The GitHub Student Developer Pack provides unlimited private repositories while you are a student.
 
 ## Use of algorithmic tools (including so-called AI and Generative AI)
-The policy is **Do NOT Trust, and Verify**. We will discuss in class what that means.
+If you use any of these tools, your approach should be **Do NOT Trust, and Verify**. We will discuss in class what that means.
 
 ## Expected behaviors and Title IX
 Students in this class are expected to acknowledge and embrace the FSE student professionalism expectation
