@@ -1,105 +1,110 @@
 ---
 title: Course Schedule
 ---
-Aug 25
+Jan 12
 :	Introduction and overview of the course
 
-Aug 27
+Jan 14
 :	Taxonomy of privacy harms + Project discussion
 
-Sep 01
-:	**No class (Labor day)**{: .label .label-purple }
+Jan 19
+:	**No class (MLK day)**{: .label .label-purple }
 
-Sep 03
+Jan 21
 :	Privacy threat modeling
 
-Sep 08
+Jan 26
 :	Probability refresher
 
-Sep 10
+Jan 28
 : Introduction to Python programming **Project proposal due**{: .label .label-orange }
 
-Sep 15
+Feb 2
 :	Python programming (cont.)
 
-Sep 17
+Feb 4
 :	k-anonymity
 : **HW 1 released**{: .label .label-green }
 
-Sep 22
-:	k-anonymity (cont.) **Revised project proposal due**{: .label .label-red }
+Feb 9
+:	k-anonymity (cont.) 
 
-Sep 24
+Feb 11
 :	Data utility & l-diversity
 
-Sep 29
+Feb 16
 :	l-diversity (cont.) & t-closeness
 : **HW 1 due**{: .label .label-red }
 
-Oct 01
+Feb 18
 :	Differential privacy
 
-Oct 06
+Feb 23
 :	Differential privacy (cont.) **HW1 grades released**{: .label .label-blue}
 
-Oct 08
+Feb 25
 :	Differential privacy (cont.)
 
-Oct 13
-:	**No class (Fall break)**{: .label .label-purple }
+Mar 2
+:	
 
-Oct 15
+Mar 4
 :	Differential privacy (cont.)
 : **HW 2 released**{: .label .label-green }
 
-Oct 20
-:	Predictive modeling basics **Project intermediate report due**{: .label .label-orange }
+Mar 9 
+:	**No class (Spring break)**{: .label .label-purple }
+Predictive modeling basics **Project intermediate report due**{: .label .label-orange }
 
-Oct 22
+Mar 11
+: **No class (Spring break)**{: .label .label-purple }
 :	Regression models, Neural Networks, and Gradient descent
 
-Oct 27
+Mar 16
 :	Attacks on ML models 
 : **HW 2 due**{: .label .label-red }
 
-Oct 29
+Mar 18
 :	Attacks on ML models (cont.)
 
-Nov 03
+Mar 23
 :	Private ML with differential privacy **HW2 grades released**{: .label .label-blue}
 
-Nov 05
+Mar 25
 :	Private ML with differential privacy (cont.)
 
-Nov 10
+Apr 1
 :	Differentially private Synthetic data generation
 
-Nov 12
+Apr 6
 :	Causality basics 
 : **HW 3 released**{: .label .label-green }
 
-Nov 17
+Apr 8
 :	Causality for privacy
 
-Nov 19
+Apr 13
 :	Causality for privacy (cont.)
 
-Nov 24
+Apr 15
 :	Causality for privacy (cont.) 
 : **HW 3 due**{: .label .label-red }
 
-Nov 26
+Apr 20
 :	Privacy and Fairness 
 : **HW 4 released**{: .label .label-green }
 
-Dec 01
+Apr 22
 :	Privacy and Fairness (cont.)
 
-Dec 03
+Apr 27
 :	Privacy and Fairness (cont.) **HW3 grades released**{: .label .label-blue}
 
-Dec 07
+Apr 29
 :	**Project final report due**{: .label .label-red }
 
-Dec 10
+Mary 4
 :	**HW 4 due**{: .label .label-red }
+
+Mary 6
+: TBD
