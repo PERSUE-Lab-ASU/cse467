@@ -28,17 +28,16 @@ Start early and plan your time well. To account for unavoidable issues, students
 ## Grading policy
 
 ### Grading components
-**Class attendance: 5%**
 
 **In-class quizzes: 20%**
 
 Short Quizzes will be administered at the beginning of every lecture (excluding Lecture 1). They will be brief and primarily aimed at making sure that you were able to follow the material covered on the previous day. The best-performing 20 quizzes across all lectures will be counted toward the final grade (each worth 1 point).
 
-**Assignments 45%**
+**Assignments 35%**
 
-There will be 4 homework assignments that will involve various tasks: programming, mathematical problem solving, designing system prototypes following privacy and security principles, explaining concepts taught in the course, and so on. Written assignments will be graded based on the clarity and validity of your arguments and analysis. You can submit one assignment up to 48 hours late without any penalty. Beyond that, 10% points will be subtracted for every 24-hour delay. The three best-scoring assignments will be counted toward your grade (each 15 points).
+There will be 3 homework assignments that will involve various tasks: programming, mathematical problem solving, designing system prototypes following privacy and security principles, explaining concepts taught in the course, and so on. Written assignments will be graded based on the clarity and validity of your arguments and analysis. You can submit one assignment up to 48 hours late without any penalty. Beyond that, 10% points will be subtracted for every 24-hour delay.
 
-**Research project 30%**
+**Research project 45%**
 
 Teams of 5-6 students will work on a novel, potentially impactful, and interesting research project <ins>related to data privacy</ins>. The project should involve any combination of the activities: implementing prototypes, conducting experiments, collecting and analyzing data, and writing a report. **The goal of this research-oriented project is to generate new scientific knowledge (not just building tools)**.
 
@@ -60,26 +59,28 @@ You will submit a report describing your research, results, and conclusions.  Th
 ## Project milestones
 
 You will complete the project in multiple milestones, and each milestone will be graded *independently* of the other parts.
-### Proposal (5 pts)
-Due by the end of Week 3, submit a short (2-page max) research proposal. At a minimum, it must contain the following sections:
+### Written Proposal (5 pts)
+Submit a short (2-page max) research proposal. At a minimum, it must contain the following sections:
 - Project title, names of the team members
 - Introduction: Problem statement and motivation, Research questions and/or hypotheses, and expected contribution.
 - Literature review: Review at least five papers on the topic of this research. Briefly explain what these papers have done, and what gap exists
   that your research will fill.
 - Brief research method: How will you conduct your research? Will you prototype/implement a system/software? If so, explain what technology/resources you will use, and how you will evaluate the implemented system. Will you collect any quantitative or qualitative data? How will you collect and analyze that data? Will there be human-subject studies? What will be the study protocol? How will you recruit participants?
 - Collaboration plan: How often will the team meet? How will you communicate? How do you expect to divide up the work?
+### Proposal presentation and Q&A (5 pts)
 
-**Evaluation criteria**: research novelty, motivation, importance, and potential impact.
 
 ### Intermediate project report (10 pts)
-Provide a progress report (max 4 pages) with intermediate results by the end of Week 8. <ins>By that time, you must be able to complete at least 30% of what you had proposed to do</ins>. Report components:
+Provide a progress report (max 4 pages) with intermediate results. <ins>The report must show the completion of at least 30% of what you had proposed to do</ins>. Report components:
 - Introduction: same content as before, but expanded (at least one page).
 - Literature review: expand as needed.
-- Methodology: detailed research methods including data collection (what specifically will you collect) and analysis approach (how will you analyze them to answer the RQs or test your hypotheses).
+- Methodology: detailed research methods, including data collection (what specifically will you collect) and analysis approach (how will you analyze them to answer the RQs or test your hypotheses).
 - Findings: partial results if available.
 - Next steps: Explain unresolved issues and challenges, and how you will resolve them. Provide a timeline to complete the remaining tasks and write the project report. How will you distribute the workload among the team members?
 
 **Evaluation criteria**:  30% complete? Methodological rigor.
+
+### Report presentation and Q&A (5 pts)
 
 ### Final report (15 pts) 
 Extend the status report with all results, discuss, interpret, contextualize the results and draw conclusions from them.  
@@ -93,6 +94,8 @@ Minimum components:
 **Evaluation criteria**: Findings, discussion, conclusions, and writing and presentation quality of the report.
 
 *Note*: references do not count toward the page limit.
+
+### Report presentation and Q&A (5 pts)
 
 **Tips about the final project**
 
