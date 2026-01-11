@@ -37,7 +37,7 @@ Short Quizzes will be administered at the beginning of every lecture (excluding 
 
 There will be 3 homework assignments that will involve various tasks: programming, mathematical problem solving, designing system prototypes following privacy and security principles, explaining concepts taught in the course, and so on. Written assignments will be graded based on the clarity and validity of your arguments and analysis. You can submit one assignment up to 48 hours late without any penalty. Beyond that, 10% points will be subtracted for every 24-hour delay.
 
-**Research project 45%**
+**Research project (replicating a published paper) 45%**
 
 Teams of 5-6 students will work on a novel, potentially impactful, and interesting research project <ins>related to data privacy</ins>. The project should involve any combination of the activities: implementing prototypes, conducting experiments, collecting and analyzing data, and writing a report. **The goal of this research-oriented project is to generate new scientific knowledge (not just building tools)**.
 
@@ -60,39 +60,26 @@ You will submit a report describing your research, results, and conclusions.  Th
 
 You will complete the project in multiple milestones, and each milestone will be graded *independently* of the other parts.
 ### Written Proposal (5 pts)
-Submit a short (2-page max) research proposal. At a minimum, it must contain the following sections:
+Submit a short (3-page max) research proposal. At a minimum, it must contain the following sections:
 - Project title, names of the team members
-- Introduction: Problem statement and motivation, Research questions and/or hypotheses, and expected contribution.
-- Literature review: Review at least five papers on the topic of this research. Briefly explain what these papers have done, and what gap exists
-  that your research will fill.
-- Brief research method: How will you conduct your research? Will you prototype/implement a system/software? If so, explain what technology/resources you will use, and how you will evaluate the implemented system. Will you collect any quantitative or qualitative data? How will you collect and analyze that data? Will there be human-subject studies? What will be the study protocol? How will you recruit participants?
-- Collaboration plan: How often will the team meet? How will you communicate? How do you expect to divide up the work?
+- A short description (~half page) of the research (basically summarizing the paper)
+- Any other planned enhancements to the original paper (for bonus points, see below).
+- Collaboration plan and timeline: How will the workload be distributed? Which team member(s) will work on what part? An estimated timeline of when different parts will be completed.   
 ### Proposal presentation and Q&A (5 pts)
 
 
 ### Intermediate project report (10 pts)
-Provide a progress report (max 4 pages) with intermediate results. <ins>The report must show the completion of at least 30% of what you had proposed to do</ins>. Report components:
-- Introduction: same content as before, but expanded (at least one page).
-- Literature review: expand as needed.
-- Methodology: detailed research methods, including data collection (what specifically will you collect) and analysis approach (how will you analyze them to answer the RQs or test your hypotheses).
-- Findings: partial results if available.
+Provide a progress report with intermediate results. <ins>The report must show the completion of at least 30% of what you had proposed to do</ins>. Report components:
+- Introduction: an introduction of the problem that you are working on.
+- Enhancement methods: if you are working toward bonus points, explain the methodology you are following to do the additional steps. Using prior research, motivate the necessity or usefulness of the additional analysis, justify why the methodology you selected is the best way to do that.
+- Methods: what parts of the planned research you have completed so far? How did you do it? Did you exactly follow the original paper? If not, why? (the reason can be either something is infeasible  
+- Results: present results that you have obtained so. Do they align with the original paper? If not, why? 
 - Next steps: Explain unresolved issues and challenges, and how you will resolve them. Provide a timeline to complete the remaining tasks and write the project report. How will you distribute the workload among the team members?
-
-**Evaluation criteria**:  30% complete? Methodological rigor.
 
 ### Report presentation and Q&A (5 pts)
 
 ### Final report (15 pts) 
-Extend the status report with all results, discuss, interpret, contextualize the results and draw conclusions from them.  
-Minimum components:
-- Introduction: expand and revise as needed
-- Literature review: expand and revise as needed
-- Methodology: complete methodological details
-- Findings: all results
-- Discussion and conclusions: interpret and contextualize the results in light of prior research. 
-
-**Evaluation criteria**: Findings, discussion, conclusions, and writing and presentation quality of the report.
-
+Extend the status report with all results, discuss, interpret, contextualize the results and draw conclusions from them (max 10 pages).  
 *Note*: references do not count toward the page limit.
 
 ### Report presentation and Q&A (5 pts)
@@ -102,12 +89,7 @@ Minimum components:
 1. You should start thinking about the final project very soon and form a team with those who have similar interests.
 2. We will discuss some project ideas in the class as examples of interesting topics.
 3. You may find ideas for possible project topics by “glancing ahead” at the course’s topics for future weeks. If some topic seems interesting but you are not very familiar with it, talk to the instructor or the TAs.
-4. You may also find ideas by checking websites such as [Markup](https://themarkup.org/series/privacy), [EPIC](http://www.epic.org/), [IAPP Privacy consortium](http://www.privacyassociation.org/), [Common Sense Media](https://www.commonsense.org/), [404 Media](https://www.404media.co/), and [Future of Privacy Forum](fpf.org).
-5. Other useful resources to learn how to do research
-    * https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/bes2.1745
-    * https://nishanthjkumar.com/A-Beginner's-Guide-to-Undergrad-CS-Research/
-    * https://www.bu.edu/synapse/2009/04/27/tips-n-tricks-part-i/
-    * https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005484
+
 
 
 
