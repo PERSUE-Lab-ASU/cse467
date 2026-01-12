@@ -96,10 +96,8 @@ Extend the status report with all results, discuss, interpret, contextualize the
 ### Bonus points
 
 Students can earn bonus points throughout the semester in various ways (max 10 points per student):
-- **Assignment submission:** 1 bonus point for submitting assignments at least one hour before the deadline. 
-- **Ask questions:** 1 bonus point for asking a thought-provoking question during the lecture. 
-- **Answer questions:** A Discord channel will be created to ask and answer questions. You will get 1 bonus point if at least 3 people find your answer to a question useful (please upvote or like the answer if you found it useful). Questions must be non-trivial to answer.
-- **Publishing research:** You can get up to 5 bonus points for your project if you create a 5-8 min video presentation explaining your research and make it public, and publish the codebase (if any) in an <ins>extremely easy-to-use format with comprehensive documentation</ins>. The blog post/video presentation must be prepared in a way that is understandable by anyone curious about scientific research. **Note:** if your project involves human subjects data collection, you should consider obtaining IRB approval *before* collecting data to make sure that your research method is ethical (this is a must if you want to publish a paper). Talk to the instructor or the TA if you need assistance with this process. You can also aim to publish your research at a conference/journal/workshop. If applicable, you can continue working on the project toward a publication after the semester ends, and we can explore possible ways to get funding to do this.
+- **Class participation and Assignment submission:** (Max 10) 1 point for answering bonus questions or asking a thought-provoking question during the class. 1 bonus point for submitting assignments at least one hour before the deadline.
+- **Project bonus points**  Up to 10 bonus points for the research project for novel contributions, such as a new dataset/algorithm or addressing limitations in the reference paper, and so on.  
 
 **NOTE: The instructor and TAs reserve exclusive rights to determine if a question/answer/post deserves the bonus point.**
 
