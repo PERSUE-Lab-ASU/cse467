@@ -20,7 +20,7 @@ Jan 28
 : Probability refresher **Project proposal due**{: .label .label-orange }
 
 Feb 2
-:	In-class proposal presentation {: .label .label-yellow }
+:	In-class proposal presentation {: .label .label-red }
 
 Feb 4
 :	Differential privacy
@@ -65,11 +65,11 @@ Mar 16
 : Attacks on ML models  **Project intermediate report due**{: .label .label-orange }
 
 Mar 18
-:	Project presentation {: .label .label-yellow }
+:	Project presentation {: .label .label-red }
 : **HW 2 due**{: .label .label-red }
 
 Mar 23
-:	Project presentation{: .label .label-yellow } 
+:	Project presentation{: .label .label-red } 
 
 Mar 25
 :	Private ML with differential privacy (cont.)
