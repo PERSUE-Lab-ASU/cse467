@@ -17,7 +17,7 @@ description: >-
 ---
 
 ## Class attendance
-Regular class attendance and participation are required unless pre-approved by the instructor or in case of emergency. There will be a sign-in poll at the start of class every day, and in-class quizzes. Students may not get attendance credit for that class and quiz if they arrive late. Please arrive on time and ready to participate by the scheduled start time.
+There will be a quiz at the start of class every day. Please arrive on time and ready to participate by the scheduled start time.
 
 **Important.** Excused absences for classes will be given without penalty to the grade in the case of (1) a university-sanctioned event [ACD 304-02]; (2) religious holidays [ACD 304-04]; a list can be found here https://eoss.asu.edu/cora/holidays ]; (3) work performed in the line-of-duty according [SSM 201-18]; Excused absences do not relieve students from responsibility for any part of the course work required during the period of absence.
 
@@ -70,16 +70,16 @@ Submit a short (3-page max) research proposal. At a minimum, it must contain the
 
 ### Intermediate project report (10 pts)
 Provide a progress report with intermediate results. <ins>The report must show the completion of at least 30% of what you had proposed to do</ins>. Report components:
-- Introduction: an introduction of the problem that you are working on.
-- Enhancement methods: if you are working toward bonus points, explain the methodology you are following to do the additional steps. Using prior research, motivate the necessity or usefulness of the additional analysis, justify why the methodology you selected is the best way to do that.
-- Methods: what parts of the planned research you have completed so far? How did you do it? Did you exactly follow the original paper? If not, why? (the reason can be either something is infeasible  
-- Results: present results that you have obtained so. Do they align with the original paper? If not, why? 
+- Introduction: an introduction to the problem that you are working on.
+- Enhancement methods: if you are working toward bonus points, explain the methodology you are following to do the additional steps. Using prior research, motivate the necessity or usefulness of the additional analysis, and justify why the methodology you selected is the best way to do that.
+- Methods: What parts of the planned research have you completed so far? How did you do it? Did you exactly follow the original paper? If not, why? (the reason can be that something is infeasible  
+- Results: present the results that you have obtained so far. Do they align with the original paper? If not, why? 
 - Next steps: Explain unresolved issues and challenges, and how you will resolve them. Provide a timeline to complete the remaining tasks and write the project report. How will you distribute the workload among the team members?
 
 ### Report presentation and Q&A (5 pts)
 
 ### Final report (15 pts) 
-Extend the status report with all results, discuss, interpret, contextualize the results and draw conclusions from them (max 10 pages).  
+Extend the status report with all results, discuss, interpret, contextualize the results, and draw conclusions from them (max 10 pages).  
 *Note*: references do not count toward the page limit.
 
 ### Report presentation and Q&A (5 pts)
