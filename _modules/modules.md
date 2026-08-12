@@ -1,111 +1,103 @@
 ---
 title: Course Schedule
 ---
-Jan 12
+Aug 24
 :	Introduction and overview of the course
 
-Jan 14
+Aug 26
 :	Taxonomy of privacy harms & Privacy threat modeling
 
-Jan 19
-:	**No class (MLK day)**{: .label .label-purple }
-
-Jan 21
+Aug 31
 :	Introduction to Python programming
 
-Jan 26
+Sep 2
 :	Python programming (cont.)
 
-Jan 28
+Sep 7
+:	**No class (Labor Day)**{: .label .label-purple }
+
+Sep 9
 : Probability refresher **Project proposal due**{: .label .label-orange }
 
-Feb 2
-:	In-class proposal presentation{: .label .label-yello}
+Sep 14
+:	In-class proposal presentation{: .label .label-yellow}
 
-Feb 4
+Sep 16
 :	Differential privacy
 
-Feb 9
-:	Differential privacy (cont.) 
+Sep 21
+:	Differential privacy (cont.)
 
-Feb 11
-:	Differential privacy (cont.)  
+Sep 23
+:	Differential privacy (cont.)
 : **HW 1 released**{: .label .label-green }
 
-Feb 16
-:	Differential privacy (cont.) 
+Sep 28
+:	Differential privacy (cont.)
 
-Feb 18
+Sep 30
 :	k-anonymity
 
-Feb 23
-:	k-anonymity (cont.) 
+Oct 5
+:	k-anonymity (cont.)
 : **HW 1 due**{: .label .label-red }
 
-Feb 25
-:	 Data utility & l-diversity
+Oct 7
+:	Data utility & l-diversity
+: **HW1 grades released**{: .label .label-blue}
 
-Mar 2
-:	l-diversity (cont.) & t-closeness 
-**HW1 grades released**{: .label .label-blue}
+Oct 12
+:	**No class (Fall Break)**{: .label .label-purple }
 
-Mar 4
+Oct 14
+:	l-diversity (cont.) & t-closeness
+
+Oct 19
 :	Predictive modeling basics
 : **HW 2 released**{: .label .label-green }
 
-Mar 9 
-:	**No class (Spring break)**{: .label .label-purple }
+Oct 21
+:	Regression models, Neural Networks, and Gradient descent
+: Attacks on ML models **Project intermediate report due**{: .label .label-orange }
 
-Mar 11
-: **No class (Spring break)**{: .label .label-purple }
-
-
-Mar 16
-:	Regression models, Neural Networks, and Gradient descent	
-: Attacks on ML models  **Project intermediate report due**{: .label .label-orange }
-
-Mar 18
+Oct 26
 :	Project presentation{: .label .label-yellow}
 : **HW 2 due**{: .label .label-blue}
 
-Mar 23
-:	Project presentation{: .label .label-red } 
+Oct 28
+:	Project presentation{: .label .label-red }
 
-Mar 25
-:	Private ML with differential privacy (cont.)
-
-Apr 1
-:	Differentially private Synthetic data generation
+Nov 2
+:	Private ML with differential privacy
 : **HW2 grades released**{: .label .label-blue}
 
-Apr 6
-:	Causality basics 
+Nov 4
+:	Differentially private Synthetic data generation
+
+Nov 9
+:	Causality basics
 : **HW 3 released**{: .label .label-green }
 
-Apr 8
+Nov 11
+:	**No class (Veterans Day)**{: .label .label-purple }
+
+Nov 16
 :	Causality for privacy
 
-Apr 13
+Nov 18
 :	Causality for privacy (cont.)
 
-Apr 15
-:	Causality for privacy (cont.) 
+Nov 23
+:	Causality for privacy (cont.)
 : **HW 3 due**{: .label .label-red }
 
-Apr 20
-:	Privacy and Fairness 
+Nov 25
+:	Privacy and Fairness
+: **HW3 grades released**{: .label .label-blue}
 
-Apr 22
+Nov 30
 :	Privacy and Fairness (cont.)
-**HW3 grades released**{: .label .label-blue}
+: **Project final report due**{: .label .label-red }
 
-Apr 27
-:	**Project final report due**{: .label .label-red } 
-
-Apr 29
-: Final report presentation{: .label .label-blue}
-
-
-May 4
-:	 Final report presentation{: .label .label-blue}
-
+Dec 2
+:	Final report presentation{: .label .label-blue}
