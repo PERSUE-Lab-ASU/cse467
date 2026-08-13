@@ -29,13 +29,13 @@ Start early and plan your time well. To account for unavoidable issues, students
 
 ### Grading components
 
-**In-class quizzes: 20%**
+**In-class pop quizzes: 20%**
 
-Short Quizzes will be administered at the beginning of every lecture (excluding Lecture 1). They will be brief and primarily aimed at making sure that you were able to follow the material covered on the previous day. The best-performing 20 quizzes across all lectures will be counted toward the final grade (each worth 1 point).
+*Unannounced* quizzes will be administered in the class. There will be 5--6 quizzes throughout the semester, and the best 4 will count toward the final grade (each worth 5 points).
 
 **Assignments 35%**
 
-There will be 3 homework assignments that will involve various tasks: programming, mathematical problem solving, designing system prototypes following privacy and security principles, explaining concepts taught in the course, and so on. Written assignments will be graded based on the clarity and validity of your arguments and analysis. You can submit one assignment up to 48 hours late without any penalty. Beyond that, 10% points will be subtracted for every 24-hour delay.
+There will be three homework assignments that will involve various tasks: programming, mathematical problem solving, designing system prototypes following privacy and security principles, explaining concepts taught in the course, and so on. Written assignments will be graded based on the clarity and validity of your arguments and analysis. You can submit one assignment up to 48 hours late without any penalty. Beyond that, 10% points will be subtracted for every 24-hour delay.
 
 **Research project (replicating a published paper) 45%**
 
@@ -88,7 +88,7 @@ Extend the status report with all results, discuss, interpret, contextualize the
 
 1. You should start thinking about the final project very soon and form a team with those who have similar interests.
 2. We will discuss some project ideas in the class as examples of interesting topics.
-3. You may find ideas for possible project topics by “glancing ahead” at the course’s topics for future weeks. If some topic seems interesting but you are not very familiar with it, talk to the instructor or the TAs.
+3. You may find ideas for possible project topics by “glancing ahead” at the course’s topics for future weeks. If a topic seems interesting but you are not very familiar with it, talk to the instructor or the TAs.
 
 
 
