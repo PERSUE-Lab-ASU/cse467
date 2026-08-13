@@ -20,7 +20,7 @@ Sep 9
 : Probability refresher **Project proposal due**{: .label .label-orange }
 
 Sep 14
-:	In-class proposal presentation{: .label .label-yellow }
+:	**In-class proposal presentation**{: .label .label-yellow }
 
 Sep 16
 :	Differential privacy
@@ -61,11 +61,11 @@ Oct 21
 : Attacks on ML models **Project intermediate report due**{: .label .label-orange }
 
 Oct 26
-:	Project presentation{: .label .label-yellow }
+:	**Project presentation day 1**{: .label .label-red }
 : **HW 2 due**{: .label .label-blue}
 
 Oct 28
-:	Project presentation{: .label .label-red }
+:	**Project presentation day 2**{: .label .label-red }
 
 Nov 2
 :	Private ML with differential privacy
@@ -96,8 +96,8 @@ Nov 25
 : **HW3 grades released**{: .label .label-blue}
 
 Nov 30
-:	Final report presentation day 1{: .label .label-blue }
+:	**Final report presentation day 1**{: .label .label-blue }
 : **Project final report due**{: .label .label-red }
 
 Dec 2
-:	Final report presentation day 2{: .label .label-blue }
+:	**Final report presentation day 2**{: .label .label-blue }
