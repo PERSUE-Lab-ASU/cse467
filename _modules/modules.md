@@ -36,7 +36,7 @@ Sep 28
 :	Differential privacy (cont.)
 
 Sep 30
-:	
+:	Differential privacy (cont.)
 
 Oct 5
 :	
