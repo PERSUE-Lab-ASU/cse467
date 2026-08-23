@@ -37,15 +37,12 @@ Start early and plan your time well. To account for unavoidable issues, students
 
 There will be three homework assignments that will involve various tasks: programming, mathematical problem solving, designing system prototypes following privacy and security principles, explaining concepts taught in the course, and so on. Written assignments will be graded based on the clarity and validity of your arguments and analysis. You can submit one assignment up to 48 hours late without any penalty. Beyond that, 10% points will be subtracted for every 24-hour delay.
 
-**Research project (replicating a published paper) 45%**
+**Research project (based on replicating published papers) 45%**
 
-Teams of 5-6 students will work on a novel, potentially impactful, and interesting research project <ins>related to data privacy</ins>. The project should involve any combination of the activities: implementing prototypes, conducting experiments, collecting and analyzing data, and writing a report. **The goal of this research-oriented project is to generate new scientific knowledge (not just building tools)**.
+Teams of 5-6 students will work on a novel, potentially impactful, and interesting research project <ins>related to data privacy</ins>. The project should involve any combination of the activities: implementing prototypes, conducting experiments, collecting and analyzing data, and writing a report. **The goal of this research-oriented project is to generate new scientific knowledge (not just building tools). Further, the focus is on the process, not the outcome.**
 
-You will submit a report describing your research, results, and conclusions.  The project will be graded based on 
-1. Importance of the problem studied/potential impact of the solution
-2. Novelty of the problem or solution, or both.
-3. The scientific validity of the research methodology.
-4. Quality of the writing, your ability to motivate your research, clarity in presenting the methods, drawing conclusions from your results, synthesizing knowledge, and contextualizing findings from prior research, as well as its conciseness.
+You will submit a report describing your research, results, and conclusions. The project will be graded based on both the written report and oral presentation in the class (see below for grade breakdown).
+
 
 ### Grading threshold 
 
@@ -58,15 +55,16 @@ You will submit a report describing your research, results, and conclusions.  Th
 
 ## Project milestones
 
-You will complete the project in multiple milestones, and each milestone will be graded *independently* of the other parts.
+You will complete the project in multiple milestones, and each milestone will be graded *independently*.
 ### Written Proposal (5 pts)
 Submit a short (3-page max) research proposal. At a minimum, it must contain the following sections:
 - Project title, names of the team members
-- A short description (~half page) of the research (basically summarizing the paper)
-- Any other planned enhancements to the original paper (for bonus points, see below).
+- A short description (~one page) of the research: what are the research questions, and how they will be answered?
+- Any other planned enhancements (for bonus points, see below).
 - Collaboration plan and timeline: How will the workload be distributed? Which team member(s) will work on what part? An estimated timeline of when different parts will be completed.   
-### Proposal presentation and Q&A (5 pts)
 
+### Proposal presentation and Q&A (5 pts)
+In class presentation of the proposal. Main evaluation criteria include understanding of the problem and the soundness of the planned methodology.
 
 ### Intermediate project report (10 pts)
 Provide a progress report with intermediate results. <ins>The report must show the completion of at least 30% of what you had proposed to do</ins>. Report components:
@@ -97,7 +95,7 @@ Extend the status report with all results, discuss, interpret, contextualize the
 
 Students can earn bonus points throughout the semester in various ways (max 10 points per student):
 - **Class participation and Assignment submission:** (Max 10) 1 point for answering bonus questions or asking a thought-provoking question during the class. 1 bonus point for submitting assignments at least one hour before the deadline.
-- **Project bonus points**  Up to 10 bonus points for the research project for novel contributions, such as a new dataset/algorithm or addressing limitations in the reference paper, and so on.  
+- **Project bonus points**  Up to 10 bonus points for the research project for novel contributions, such as a new dataset/algorithm or addressing limitations in the referenced papers, and so on.  
 
 **NOTE: The instructor and TAs reserve exclusive rights to determine if a question/answer/post deserves the bonus point.**
 
