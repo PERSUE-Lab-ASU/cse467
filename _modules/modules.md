@@ -1,5 +1,5 @@
 ---
-title: Course Schedule
+title: Course Schedule (Tentative)
 ---
 Aug 24
 :	Introduction and overview of the course
@@ -36,32 +36,31 @@ Sep 28
 :	Differential privacy (cont.)
 
 Sep 30
-:	Differential privacy (cont.)
-
-Oct 5
-:	
+:	Machine learning basics
 : **HW 1 due**{: .label .label-yellow }
 
+Oct 5
+:	Machine learning basics (cont.)
+
 Oct 7
-:	Machine learning basics
+:	Regression, Neural Net and other models 
+: Membership Inference Attacks on ML models
 
 
 Oct 12
 :	**No class (Fall Break)**{: .label .label-purple }
 
 Oct 14
-:	Regression, Neural Net and other models 
-: Attacks on ML models **Project intermediate report due**{: .label .label-orange }
+:	Private ML with differential privacy
+: **Project intermediate report due**{: .label .label-orange }
 : **HW1 grades released**{: .label .label-green }
 
 Oct 19
-:	Private ML with differential privacy
+:	Differentially private Synthetic data generation
 : **HW 2 released**{: .label .label-green }
 
 Oct 21
-:	Differentially private Synthetic data generation
-: 
-
+:	:	Causality basics
 Oct 26
 :	**Project presentation day 1**{: .label .label-blue }
 : **HW 2 due**{: .label .label-yellow}
@@ -70,7 +69,7 @@ Oct 28
 :	**Project presentation day 2**{: .label .label-blue }
 
 Nov 2
-:	Causality basics
+:	Causality basics (cont.)
 : **HW2 grades released**{: .label .label-green }
 
 Nov 4
