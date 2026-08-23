@@ -5,10 +5,12 @@ Aug 24
 :	Introduction and overview of the course
 
 Aug 26
-:	Taxonomy of privacy harms & Privacy threat modeling
+:	Course project descriptions
+: Taxonomy of privacy harms & Privacy threat modeling
 
 Aug 31
 :	Introduction to Python programming
+: **Deadline for project team formation**{: .label .label-red }
 
 Sep 2
 :	Python programming (cont.)
@@ -17,7 +19,7 @@ Sep 7
 :	**No class (Labor Day)**{: .label .label-purple }
 
 Sep 9
-: Probability refresher **Project proposal due**{: .label .label-orange }
+: Probability refresher **Project proposal due**{: .label .label-red }
 
 Sep 14
 :	**In-class proposal presentation**{: .label .label-blue }
@@ -60,7 +62,8 @@ Oct 19
 : **HW 2 released**{: .label .label-green }
 
 Oct 21
-:	:	Causality basics
+:	Causality basics
+
 Oct 26
 :	**Project presentation day 1**{: .label .label-blue }
 : **HW 2 due**{: .label .label-yellow}
