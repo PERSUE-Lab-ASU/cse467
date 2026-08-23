@@ -62,7 +62,7 @@ Oct 19
 : **HW 2 released**{: .label .label-green }
 
 Oct 21
-:	Causality basics
+:	Causal Machine learning basics
 
 Oct 26
 :	**Project presentation day 1**{: .label .label-blue }
