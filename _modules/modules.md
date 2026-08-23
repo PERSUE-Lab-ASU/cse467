@@ -44,13 +44,14 @@ Oct 5
 
 Oct 7
 :	Data utility & l-diversity
-: **HW1 grades released**{: .label .label-blue }
+
 
 Oct 12
 :	**No class (Fall Break)**{: .label .label-purple }
 
 Oct 14
 :	l-diversity (cont.) & t-closeness
+: **HW1 grades released**{: .label .label-blue }
 
 Oct 19
 :	Predictive modeling basics
@@ -93,11 +94,12 @@ Nov 23
 
 Nov 25
 :	Privacy and Fairness
-: **HW3 grades released**{: .label .label-blue}
+: **Project final report due**{: .label .label-red }
 
 Nov 30
 :	**Final report presentation day 1**{: .label .label-blue }
-: **Project final report due**{: .label .label-red }
+
 
 Dec 2
 :	**Final report presentation day 2**{: .label .label-blue }
+: **HW3 grades released**{: .label .label-blue}
