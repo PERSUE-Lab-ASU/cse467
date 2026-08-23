@@ -20,7 +20,7 @@ Sep 9
 : Probability refresher **Project proposal due**{: .label .label-orange }
 
 Sep 14
-:	**In-class proposal presentation**{: .label .label-yellow }
+:	**In-class proposal presentation**{: .label .label-blue }
 
 Sep 16
 :	Differential privacy
@@ -40,7 +40,7 @@ Sep 30
 
 Oct 5
 :	
-: **HW 1 due**{: .label .label-red }
+: **HW 1 due**{: .label .label-yellow }
 
 Oct 7
 :	Machine learning basics
@@ -52,7 +52,7 @@ Oct 12
 Oct 14
 :	Regression, Neural Net and other models 
 : Attacks on ML models **Project intermediate report due**{: .label .label-orange }
-: **HW1 grades released**{: .label .label-blue }
+: **HW1 grades released**{: .label .label-green }
 
 Oct 19
 :	Private ML with differential privacy
@@ -63,22 +63,21 @@ Oct 21
 : 
 
 Oct 26
-:	**Project presentation day 1**{: .label .label-red }
-: **HW 2 due**{: .label .label-blue}
+:	**Project presentation day 1**{: .label .label-blue }
+: **HW 2 due**{: .label .label-yellow}
 
 Oct 28
-:	**Project presentation day 2**{: .label .label-red }
+:	**Project presentation day 2**{: .label .label-blue }
 
 Nov 2
 :	Causality basics
-: **HW2 grades released**{: .label .label-blue }
+: **HW2 grades released**{: .label .label-green }
 
 Nov 4
 :	Causality (Cont.)
 
 Nov 9
 :	Causality for data minimization
-: **HW 3 released**{: .label .label-green }
 
 Nov 11
 :	**No class (Veterans Day)**{: .label .label-purple }
@@ -88,13 +87,14 @@ Nov 16
 
 Nov 18
 :	l-diversity
+: **HW 3 released**{: .label .label-green }
 
 Nov 23
 :	t-closeness
-: **HW 3 due**{: .label .label-red }
 
 Nov 25
 :	TBD
+: **HW 3 due**{: .label .label-yellow }
 
 Nov 27
 : **Project final report due**{: .label .label-red }
