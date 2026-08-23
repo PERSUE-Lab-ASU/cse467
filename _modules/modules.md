@@ -36,30 +36,31 @@ Sep 28
 :	Differential privacy (cont.)
 
 Sep 30
-:	k-anonymity
+:	
 
 Oct 5
-:	k-anonymity (cont.)
+:	
 : **HW 1 due**{: .label .label-red }
 
 Oct 7
-:	Data utility & l-diversity
+:	Machine learning basics
 
 
 Oct 12
 :	**No class (Fall Break)**{: .label .label-purple }
 
 Oct 14
-:	l-diversity (cont.) & t-closeness
+:	Regression, Neural Net and other models 
+: Attacks on ML models **Project intermediate report due**{: .label .label-orange }
 : **HW1 grades released**{: .label .label-blue }
 
 Oct 19
-:	Predictive modeling basics
+:	Private ML with differential privacy
 : **HW 2 released**{: .label .label-green }
 
 Oct 21
-:	Regression models, Neural Networks, and Gradient descent
-: Attacks on ML models **Project intermediate report due**{: .label .label-orange }
+:	Differentially private Synthetic data generation
+: 
 
 Oct 26
 :	**Project presentation day 1**{: .label .label-red }
@@ -69,31 +70,33 @@ Oct 28
 :	**Project presentation day 2**{: .label .label-red }
 
 Nov 2
-:	Private ML with differential privacy
+:	Causality basics
 : **HW2 grades released**{: .label .label-blue }
 
 Nov 4
-:	Differentially private Synthetic data generation
+:	Causality (Cont.)
 
 Nov 9
-:	Causality basics
+:	Causality for data minimization
 : **HW 3 released**{: .label .label-green }
 
 Nov 11
 :	**No class (Veterans Day)**{: .label .label-purple }
 
 Nov 16
-:	Causality for privacy
+:	k-anonymity
 
 Nov 18
-:	Causality for privacy (cont.)
+:	l-diversity
 
 Nov 23
-:	Causality for privacy (cont.)
+:	t-closeness
 : **HW 3 due**{: .label .label-red }
 
 Nov 25
-:	Privacy and Fairness
+:	TBD
+
+Nov 27
 : **Project final report due**{: .label .label-red }
 
 Nov 30
