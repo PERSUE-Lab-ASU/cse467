@@ -110,4 +110,7 @@ Dec 2
 
 Dec 4
 :	**Final report presentation day 2**{: .label .label-blue }
+
+Dec 6
+: **Project artifacts due**{: .label .label-red }
 : **HW3 grades released**{: .label .label-blue}
