@@ -95,16 +95,19 @@ Nov 23
 :	t-closeness
 
 Nov 25
-:	TBD
+:	Privacy and Fairness
 : **HW 3 due**{: .label .label-yellow }
 
-Nov 27
-: **Project final report due**{: .label .label-red }
 
 Nov 30
+: TBD
+: **Project final report due**{: .label .label-red }
 :	**Final report presentation day 1**{: .label .label-blue }
 
 
 Dec 2
+:	**Final report presentation day 1**{: .label .label-blue }
+
+Dec 4
 :	**Final report presentation day 2**{: .label .label-blue }
 : **HW3 grades released**{: .label .label-blue}
