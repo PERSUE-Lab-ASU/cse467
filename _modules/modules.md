@@ -6,14 +6,14 @@ Aug 24
 
 Aug 26
 :	Course project descriptions
-: Taxonomy of privacy harms & Privacy threat modeling
+
 
 Aug 31
-:	Introduction to Python programming
+:	Taxonomy of privacy harms & Privacy threat modeling
 : **Deadline for project team formation**{: .label .label-red }
 
 Sep 2
-:	Python programming (cont.)
+:	Introduction to Python programming
 
 Sep 7
 :	**No class (Labor Day)**{: .label .label-purple }
