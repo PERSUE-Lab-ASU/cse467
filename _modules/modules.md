@@ -102,7 +102,6 @@ Nov 25
 Nov 30
 : TBD
 : **Project final report due**{: .label .label-red }
-:	**Final report presentation day 1**{: .label .label-blue }
 
 
 Dec 2
