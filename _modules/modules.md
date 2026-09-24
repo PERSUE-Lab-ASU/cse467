@@ -32,17 +32,19 @@ Sep 21
 
 Sep 23
 :	Differential privacy (cont.)
-: **HW 1 released**{: .label .label-green }
+
 
 Sep 28
 :	Differential privacy (cont.)
+: **HW 1 released**{: .label .label-green }
 
 Sep 30
 :	Machine learning basics
-: **HW 1 due**{: .label .label-yellow }
+
 
 Oct 5
 :	Machine learning basics (cont.)
+: **HW 1 due**{: .label .label-yellow }
 
 Oct 7
 :	Regression, Neural Net and other models 
