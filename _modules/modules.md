@@ -33,7 +33,6 @@ Sep 21
 Sep 23
 :	Differential privacy (cont.)
 
-
 Sep 28
 :	Differential privacy (cont.)
 : **HW 1 released**{: .label .label-green }
