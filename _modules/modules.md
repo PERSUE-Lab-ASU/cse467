@@ -43,12 +43,11 @@ Sep 30
 
 Oct 5
 :	Machine learning basics (cont.)
-: **HW 1 due**{: .label .label-yellow }
 
 Oct 7
 :	Regression, Neural Net and other models 
 : Membership Inference Attacks on ML models
-
+: **HW 1 due**{: .label .label-yellow }
 
 Oct 12
 :	**No class (Fall Break)**{: .label .label-purple }
