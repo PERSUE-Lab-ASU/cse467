@@ -54,11 +54,11 @@ Oct 12
 
 Oct 14
 :	Private ML with differential privacy
-: **Project intermediate report due**{: .label .label-orange }
 : **HW1 grades released**{: .label .label-green }
 
 Oct 19
 :	Differentially private Synthetic data generation
+: **Project intermediate report due**{: .label .label-orange }
 : **HW 2 released**{: .label .label-green }
 
 Oct 21
