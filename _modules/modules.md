@@ -59,7 +59,7 @@ Oct 14
 Oct 19
 :	Differentially private Synthetic data generation
 : **Project intermediate report due**{: .label .label-orange }
-: **HW 2 released**{: .label .label-green }
+
 
 Oct 21
 :	Causal Machine learning basics
@@ -73,13 +73,14 @@ Oct 28
 
 Nov 2
 :	Causality basics (cont.)
-: **HW2 grades released**{: .label .label-green }
+: **HW 2 released**{: .label .label-green }
 
 Nov 4
 :	Causality (Cont.)
 
 Nov 9
 :	Causality for data minimization
+: **HW2 grades released**{: .label .label-green }
 
 Nov 11
 :	**No class (Veterans Day)**{: .label .label-purple }
