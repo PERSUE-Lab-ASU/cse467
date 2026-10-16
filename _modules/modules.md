@@ -66,7 +66,7 @@ Oct 21
 
 Oct 26
 :	**Project presentation day 1**{: .label .label-blue }
-: **HW 2 due**{: .label .label-yellow}
+
 
 Oct 28
 :	**Project presentation day 2**{: .label .label-blue }
@@ -80,13 +80,14 @@ Nov 4
 
 Nov 9
 :	Causality for data minimization
-: **HW2 grades released**{: .label .label-green }
+: **HW 2 due**{: .label .label-yellow}
 
 Nov 11
 :	**No class (Veterans Day)**{: .label .label-purple }
 
 Nov 16
 :	k-anonymity
+: **HW2 grades released**{: .label .label-green }
 
 Nov 18
 :	l-diversity
