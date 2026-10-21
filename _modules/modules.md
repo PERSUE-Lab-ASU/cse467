@@ -58,11 +58,11 @@ Oct 14
 
 Oct 19
 :	Differentially private Synthetic data generation
-: **Project intermediate report due**{: .label .label-orange }
 
 
 Oct 21
 :	Causal Machine learning basics
+:  **Project intermediate report due**{: .label .label-orange }
 
 Oct 26
 :	**Project presentation day 1**{: .label .label-blue }
